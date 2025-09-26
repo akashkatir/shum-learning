@@ -89,8 +89,9 @@
 		right: 0;
 		text-align: center;
 		padding: 0.75rem 1rem;
-		backdrop-filter: blur(10px);
+		backdrop-filter: blur(2px);
 		z-index: 10;
+		padding: 0;
 	}
 
 	.app-footer p {
