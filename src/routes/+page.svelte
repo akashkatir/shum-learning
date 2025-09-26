@@ -124,17 +124,17 @@
 				<h3>Deeper Study</h3>
 				<p>{languageNotes.deeperStudy}</p>
 			</div>
-			<div class="card">
-				<h3>Concept of I</h3>
-				<p>{languageNotes.conceptOfI.introduction}</p>
-				<ul>
-					{#each languageNotes.conceptOfI.terms as term}
-						<li>
-							<strong>{term.term}</strong>
-							<span>{term.definition}</span>
-						</li>
-					{/each}
-				</ul>
+		</div>
+		<div class="concept-of-i">
+			<h3>Concept of I</h3>
+			<p class="concept-intro">{languageNotes.conceptOfI.introduction}</p>
+			<div class="i-concepts-grid">
+				{#each languageNotes.conceptOfI.terms as term}
+					<div class="i-concept-card">
+						<h4>{term.term}</h4>
+						<p>{term.definition}</p>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</section>
@@ -622,7 +622,68 @@
 
 	.language-notes .cards-grid {
 		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.concept-of-i {
+		text-align: center;
+	}
+
+	.concept-of-i h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: #1a202c;
+		font-weight: 600;
+		background: var(--gradient-primary);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.concept-intro {
+		font-size: 1.1rem;
+		color: #4a5568;
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.i-concepts-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.i-concept-card {
+		background: rgba(255, 255, 255, 0.9);
+		border-radius: 16px;
+		padding: 1.5rem;
+		box-shadow: 0 10px 30px rgba(var(--sky-magenta-rgb), 0.12);
+		border: 1px solid rgba(var(--sky-magenta-rgb), 0.2);
+		transition: all 0.3s ease;
+		backdrop-filter: blur(5px);
+	}
+
+	.i-concept-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 15px 35px rgba(var(--sky-magenta-rgb), 0.2);
+		background: rgba(255, 255, 255, 0.95);
+	}
+
+	.i-concept-card h4 {
+		font-size: 1.3rem;
+		margin: 0 0 0.75rem 0;
+		color: var(--sky-magenta);
+		font-weight: 600;
+	}
+
+	.i-concept-card p {
+		margin: 0;
+		line-height: 1.6;
+		color: #4a5568;
 	}
 
 	.language-notes .card {
@@ -640,26 +701,6 @@
 		transform: translateY(-3px);
 		box-shadow: 0 18px 40px rgba(102, 126, 234, 0.18);
 		background: rgba(255, 255, 255, 0.9);
-	}
-
-	.language-notes .card ul {
-		list-style: none;
-		margin: 1.25rem 0 0;
-		padding: 0;
-		display: grid;
-		gap: 0.75rem;
-	}
-
-	.language-notes .card li {
-		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
-	}
-
-	.language-notes .card strong {
-		font-size: 1.1rem;
-		color: #667eea;
-		font-weight: 600;
 	}
 
 	@media (min-width: 940px) {
@@ -687,7 +728,21 @@
 		}
 
 		.language-notes .cards-grid {
-			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.i-concepts-grid {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		}
+	}
+
+	@media (max-width: 699px) {
+		.language-notes .cards-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.i-concepts-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 
