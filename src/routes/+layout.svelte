@@ -22,6 +22,10 @@
 
 {@render children?.()}
 
+<footer class="app-footer">
+	<p>Made by Easan and Akash - 2025</p>
+</footer>
+
 <style>
 	:global(:root) {
 		/* Palette - HEX */
@@ -76,5 +80,25 @@
 
 	:global(*, *::before, *::after) {
 		box-sizing: border-box;
+	}
+
+	.app-footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding: 0.75rem 1rem;
+		backdrop-filter: blur(10px);
+		z-index: 10;
+	}
+
+	.app-footer p {
+		margin: 0;
+		color: white;
+		font-size: 0.85rem;
+		font-weight: 400;
+		opacity: 0.8;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 	}
 </style>

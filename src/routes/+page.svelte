@@ -22,7 +22,7 @@
 <main class="layout">
 	<section class="hero">
 		<div class="hero__text">
-			<h1>Conversational Shum Primer</h1>
+			<h1>Conversational <span class="shum-title">Shum Primer</span></h1>
 			<p>
 				This primer introduces conversational Shum, a mystical language designed for clear and
 				simple communication of inner life. Each lesson builds on the previous one, covering
@@ -64,25 +64,27 @@
 
 	<section class="language-notes">
 		<h2>Language Notes</h2>
-		<div class="card">
-			<h3>Summary</h3>
-			<p>{languageNotes.summary}</p>
-		</div>
-		<div class="card">
-			<h3>Deeper Study</h3>
-			<p>{languageNotes.deeperStudy}</p>
-		</div>
-		<div class="card">
-			<h3>Concept of I</h3>
-			<p>{languageNotes.conceptOfI.introduction}</p>
-			<ul>
-				{#each languageNotes.conceptOfI.terms as term}
-					<li>
-						<strong>{term.term}</strong>
-						<span>{term.definition}</span>
-					</li>
-				{/each}
-			</ul>
+		<div class="cards-grid">
+			<div class="card">
+				<h3>Summary</h3>
+				<p>{languageNotes.summary}</p>
+			</div>
+			<div class="card">
+				<h3>Deeper Study</h3>
+				<p>{languageNotes.deeperStudy}</p>
+			</div>
+			<div class="card">
+				<h3>Concept of I</h3>
+				<p>{languageNotes.conceptOfI.introduction}</p>
+				<ul>
+					{#each languageNotes.conceptOfI.terms as term}
+						<li>
+							<strong>{term.term}</strong>
+							<span>{term.definition}</span>
+						</li>
+					{/each}
+				</ul>
+			</div>
 		</div>
 	</section>
 </main>
@@ -126,6 +128,16 @@
 		font-weight: 700;
 	}
 
+	.shum-title {
+		font-size: 1.2em;
+		font-weight: 800;
+		background: var(--gradient-brand);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		letter-spacing: -0.03em;
+	}
+
 	.hero__text p {
 		font-size: 1.2rem;
 		line-height: 1.75;
@@ -160,12 +172,11 @@
 	}
 
 	.hero__text button.is-complete {
-		background: var(--sky-magenta);
+		background: var(--gradient-primary);
 	}
 
 	.hero__text button.is-complete:hover {
-		background: var(--sky-magenta);
-		filter: brightness(1.1);
+		background: var(--gradient-primary-hover);
 	}
 
 	.hero__image {
@@ -210,6 +221,10 @@
 		text-align: center;
 		color: #1a202c;
 		font-weight: 600;
+		background: var(--gradient-primary);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 
 	.lessons ul {
@@ -293,6 +308,12 @@
 	}
 
 	.language-notes {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.language-notes .cards-grid {
 		display: grid;
 		gap: 2rem;
 	}
@@ -358,7 +379,7 @@
 			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		}
 
-		.language-notes {
+		.language-notes .cards-grid {
 			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		}
 	}
