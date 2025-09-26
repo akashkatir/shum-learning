@@ -1,0 +1,313 @@
+{
+    "lessons": [
+        {
+            "lessonNumber": 1,
+            "title": "Greetings and Introductions",
+            "objective": "Learn to greet others, introduce yourself, and say goodbye in Shum, focusing on awareness and inner states.",
+            "vocabulary": [
+                {
+                    "shum": "Bihyishum",
+                    "pronunciation": "bee-HAYEE-shoom",
+                    "english": "Hello",
+                    "literalMeaning": "Contentment under all circumstances."
+                },
+                {
+                    "shum": "Dikamaja",
+                    "pronunciation": "dee-kah-MAH-jah",
+                    "english": "Goodbye",
+                    "literalMeaning": "Going and will return (like 'see you again')."
+                },
+                {
+                    "shum": "Ining",
+                    "pronunciation": "IN-ning",
+                    "english": "I / My external personality",
+                    "literalMeaning": "Used for 'I' when referring to outward identity."
+                },
+                {
+                    "shum": "Niimf",
+                    "pronunciation": "NEE-mf",
+                    "english": "I (as awareness)",
+                    "literalMeaning": "I, as awareness traveling through the mind’s dimensions."
+                },
+                {
+                    "shum": "Luhling",
+                    "pronunciation": "LUH-ling",
+                    "english": "You (outwardly)",
+                    "literalMeaning": "Your external personality."
+                },
+                {
+                    "shum": "Kamm niimf?",
+                    "pronunciation": "KAM NEE-mf",
+                    "english": "How are you?",
+                    "literalMeaning": "Where is your awareness traveling?"
+                },
+                {
+                    "shum": "Zasiba",
+                    "pronunciation": "zah-SEE-bah",
+                    "english": "Well-being",
+                    "literalMeaning": "A state of inner harmony."
+                },
+                {
+                    "shum": "Tyebabalingna",
+                    "pronunciation": "tye-bah-bah-LING-nah",
+                    "english": "Happy feelings",
+                    "literalMeaning": "Consciousness of happy feelings."
+                },
+                {
+                    "shum": "Chashum",
+                    "pronunciation": "CHAH-shoom",
+                    "english": "Good",
+                    "literalMeaning": "The ability to light up from within."
+                },
+                {
+                    "shum": "Sika",
+                    "pronunciation": "SEE-kah",
+                    "english": "Bad",
+                    "literalMeaning": "An unhappy inner condition."
+                }
+            ],
+            "syntaxNotes": [
+                "Shum syntax is flexible, often Subject-Action-Object (SVO), but the subject (niimf, awareness) is often implied and omitted.",
+                "No articles ('a,' 'the') are used, keeping expressions concise.",
+                "Questions start with interrogatives: Bi (what), Kamm (where/when), Chatyem (why).",
+                "Focus is on awareness (niimf) rather than physical self, so questions like 'Kamm niimf?' probe inner states."
+            ],
+            "examplePhrases": [
+                {
+                    "shum": "Bihyishum, ining [Isani].",
+                    "english": "Hello, I am [Isani].",
+                    "explanation": "My external personality is [Isani], with awareness in contentment."
+                },
+                {
+                    "shum": "Kamm niimf? Zasiba.",
+                    "english": "How are you? I’m in well-being.",
+                    "explanation": "Where’s your awareness? In harmony."
+                },
+                {
+                    "shum": "Tyebabalingna, dikamaja!",
+                    "english": "Happy feelings, goodbye!",
+                    "explanation": "My awareness is happy, and I’ll return."
+                }
+            ],
+            "practice": [
+                "Greet someone: Say 'Bihyishum' and introduce yourself with 'Ining [your name].'",
+                "Ask 'Kamm niimf?' and respond with 'Zasiba,' 'Chashum,' or 'Sika.'",
+                "Part with 'Dikamaja' to express a friendly departure."
+            ],
+            "tip": "Visualize a color (e.g., bright red and dark blue for zasiba) while speaking to connect with Shum’s meditative roots."
+        },
+        {
+            "lessonNumber": 2,
+            "title": "Basic Phrases and Questions",
+            "objective": "Ask simple questions and express needs or preferences, emphasizing superconscious desires.",
+            "vocabulary": [
+                {
+                    "shum": "Bi símm'°?",
+                    "pronunciation": "BEE SIMM",
+                    "english": "What is this?",
+                    "literalMeaning": "Símm'° = thing in any dimension; ° indicates 'mm'."
+                },
+                {
+                    "shum": "Bi",
+                    "pronunciation": "BEE",
+                    "english": "What",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Limwati",
+                    "pronunciation": "lim-WAH-tee",
+                    "english": "Want / Desire",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Kamlimwati",
+                    "pronunciation": "kam-lim-WAH-tee",
+                    "english": "Superconscious desire",
+                    "literalMeaning": "Desire for spiritual unfoldment; superconscious impulse."
+                },
+                {
+                    "shum": "Vumnimbi",
+                    "pronunciation": "voom-NIM-bee",
+                    "english": "Like / Love",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Mii",
+                    "pronunciation": "MEE",
+                    "english": "Yes",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Im'°",
+                    "pronunciation": "IM",
+                    "english": "No",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Tyevum",
+                    "pronunciation": "TYE-voom",
+                    "english": "Water",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Unuh",
+                    "pronunciation": "UU-nuh",
+                    "english": "Food",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Limbuhtye",
+                    "pronunciation": "lim-BUH-tye",
+                    "english": "Please",
+                    "literalMeaning": null
+                }
+            ],
+            "syntaxNotes": [
+                "No verb for 'is' exists; use 'cha’a' (appears) to describe presence (e.g., 'Kamni cha’a' = coffee appears).",
+                "Express desire with limwati + object (e.g., 'Limwati tyevum' = I want water).",
+                "Negate by placing 'im'°' before the verb or concept (e.g., 'Im'° limwati' = I don’t want).",
+                "Questions use 'bi' for 'what' (e.g., 'Bi luhling limwati?' = What do you want?)."
+            ],
+            "examplePhrases": [
+                {
+                    "shum": "Bi luhling limwati kamni? Kamni cha’a.",
+                    "english": "Do you want coffee? Here’s coffee.",
+                    "explanation": "Do you want coffee? Coffee appears."
+                },
+                {
+                    "shum": "Limwati tyevum, limbuhtye.",
+                    "english": "I want water, please.",
+                    "explanation": null
+                },
+                {
+                    "shum": "Luhling vumnimbi unuh? Mii, vumnimbi.",
+                    "english": "Do you like food? Yes, I like.",
+                    "explanation": null
+                }
+            ],
+            "practice": [
+                "Ask someone’s desire: 'Bi luhling limwati?'",
+                "Request water or food: 'Limwati tyevum, limbuhtye' or 'Limwati unuh.'",
+                "Respond to 'Bi Luhling vumnimbi unuh?' with 'Mii, vumnimbi' or 'Im'° vumnimbi.'"
+            ],
+            "tip": "One can speak each phrase slowly and deliberately to align with Shum’s meditative flow."
+        },
+        {
+            "lessonNumber": 3,
+            "title": "Simple Sentence Construction",
+            "objective": "Build sentences to describe actions, destinations, and preferences, blending physical and inner states.",
+            "vocabulary": [
+                {
+                    "shum": "U",
+                    "pronunciation": "OO",
+                    "english": "And",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Kavum",
+                    "pronunciation": "KAH-voom",
+                    "english": "Go",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Bima",
+                    "pronunciation": "BEE-mah",
+                    "english": "House",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "La",
+                    "pronunciation": "LAH",
+                    "english": "Physical aspect of being",
+                    "literalMeaning": "Used when focusing on body consciousness."
+                },
+                {
+                    "shum": "Tyeamli",
+                    "pronunciation": "tye-AM-lee",
+                    "english": "Friend",
+                    "literalMeaning": null
+                },
+                {
+                    "shum": "Kamm luhling la kavum?",
+                    "pronunciation": "KAM LOO-ling LAH KAH-voom",
+                    "english": "Where are you going (physically)?",
+                    "literalMeaning": "Where is your physical being going?"
+                },
+                {
+                    "shum": "Chamam",
+                    "pronunciation": "CHAH-mam",
+                    "english": "To",
+                    "literalMeaning": "To meet, connect, touch."
+                },
+                {
+                    "shum": "Chana",
+                    "pronunciation": "CHAH-nah",
+                    "english": "Eat",
+                    "literalMeaning": "Swallow, assimilate."
+                }
+            ],
+            "syntaxNotes": [
+                "Combine ideas with 'u' (and): e.g., 'Zasiba u limwati tyevum' (I’m good and want water).",
+                "Use 'chamam' for destinations: e.g., 'La kavum chamam bima' (My physical self goes to house).",
+                "Questions about physical movement use 'kamm' + 'la' + verb (e.g., 'Kamm luhling la kavum?' = Where are you going physically?).",
+                "Contrast this with 'kamm niimf?' (Where is your awareness?), which probes inner states."
+            ],
+            "examplePhrases": [
+                {
+                    "shum": "La kavum chamam bima u vumnimbi unuh.",
+                    "english": "I go to the house and like food.",
+                    "explanation": "My physical self goes to the house and loves food."
+                },
+                {
+                    "shum": "Kamm luhling la kavum? Ining kavum chamam tyeamli.",
+                    "english": "Where are you going? I go to see a friend.",
+                    "explanation": null
+                },
+                {
+                    "shum": "Bi luhling limwati tyevum u unuh? Mii, limwati.",
+                    "english": "Do you want water and food? Yes, I want.",
+                    "explanation": null
+                }
+            ],
+            "practice": [
+                "Say you’re going to a friend’s house: 'La kavum chamam tyeamli bima.'",
+                "Ask someone’s destination: 'Kamm luhling la kavum?'",
+                "Combine states: 'Zasiba u limwati tyevum' (I’m good and want water)."
+            ],
+            "tip": "When saying kavum (go), imagine your energy moving to the destination for a meditative effect."
+        }
+    ],
+    "learningTips": [
+        "Practice Aloud: Speak slowly, letting each syllable resonate to connect with Shum’s spiritual vibe.",
+        "Flashcards: Write vocabulary on cards, including literal meanings (e.g., bihyishum = contentment) to deepen understanding.",
+        "Form Sentences: Create your own phrases, like 'Ining vumnimbi tyevum' (I like water), to build fluency.",
+        "Meditative Conversations: Use Shum with a partner to discuss inner states (e.g., 'Kamm niimf?'), visualizing colors or energies for each word.",
+        "Journal: Note how phrases feel when spoken—Shum is as much about inner experience as external communication.",
+        "Draw: Practice the script and how to connect images."
+    ],
+    "languageNotes": {
+        "summary": "Shum’s 'conversational' form is unconventional, as it’s designed to map inner consciousness, not just exchange facts. Words like 'niimf' (awareness) prioritize spiritual states over physical ones. The lack of 'is' and flexible syntax reflect Shum’s focus on fluidity and presence ('cha’a' = appears).",
+        "deeperStudy": "For deeper study, explore Shum’s full list of glyphs (visual symbols) and mambashum via resources like the Kauai Aadheenam website, which offers audio guides and extensive resources.",
+        "conceptOfI": {
+            "introduction": "There are multiple ways to refer to 'I', depending on the state of being.",
+            "terms": [
+                {
+                    "term": "Nif",
+                    "definition": "The essential 'I'; pure awareness experiencing the 7 dimensions of the mind."
+                },
+                {
+                    "term": "Niimf",
+                    "definition": "Awareness as it travels and moves from one area of the mind to another."
+                },
+                {
+                    "term": "Ining",
+                    "definition": "The external personality; the collection of thoughts and feelings one presents outwardly."
+                },
+                {
+                    "term": "M’ming",
+                    "definition": "The internal, hidden persona; the collection of subconscious vasanas."
+                }
+            ]
+        }
+    }
+}
