@@ -286,12 +286,12 @@
 		z-index: 2;
 	}
 
-	/* Planet 1, 2, 10, 11 - Ring 1 (190px radius from center) */
+	/* Planet 1, 2, 10, 11 - Ring 1 (210px radius from center for better clearance) */
 	.planet-1 {
 		width: 12px;
 		height: 12px;
 		background: radial-gradient(circle at 30% 30%, var(--tea-green), var(--olivine));
-		top: 54px; /* 250 - 190 - 6 */
+		top: 3px; /* 250 - 210 - 6 */
 		left: 244px; /* 250 + 0 - 6 */
 	}
 
@@ -300,14 +300,14 @@
 		height: 8px;
 		background: radial-gradient(circle at 30% 30%, var(--sky-magenta), var(--cambridge-blue));
 		top: 246px; /* 250 + 0 - 4 */
-		left: 436px; /* 250 + 190 - 4 */
+		left: 456px; /* 250 + 210 - 4 */
 	}
 
 	.planet-10 {
 		width: 10px;
 		height: 10px;
 		background: radial-gradient(circle at 30% 30%, var(--yellow-green), var(--sky-magenta));
-		top: 435px; /* 250 + 190 - 5 */
+		top: 455px; /* 250 + 210 - 5 */
 		left: 245px; /* 250 + 0 - 5 */
 	}
 
@@ -316,7 +316,7 @@
 		height: 14px;
 		background: radial-gradient(circle at 30% 30%, var(--cambridge-blue), var(--olivine));
 		top: 243px; /* 250 + 0 - 7 */
-		left: 53px; /* 250 - 190 - 7 */
+		left: 3px; /* 250 - 210 - 7 */
 	}
 
 	/* Planet 3, 4, 5, 12, 13 - Ring 2 (220px radius from center) */
@@ -340,7 +340,7 @@
 		width: 14px;
 		height: 14px;
 		background: radial-gradient(circle at 30% 30%, var(--olivine), var(--yellow-green));
-		top: 387px; /* 250 + 220*cos(144°) - 7 */
+		top: 384px; /* 250 + 220*cos(144°) - 7 */
 		left: 393px; /* 250 + 220*sin(144°) - 7 */
 	}
 
@@ -356,7 +356,7 @@
 		width: 18px;
 		height: 18px;
 		background: radial-gradient(circle at 30% 30%, var(--sky-magenta), var(--yellow-green));
-		top: 113px; /* 250 - 220*cos(288°) - 9 */
+		top: 130px; /* 250 - 220*cos(288°) - 9 */
 		left: 22px; /* 250 + 220*sin(288°) - 9 */
 	}
 
