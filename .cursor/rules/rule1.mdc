@@ -1,0 +1,6 @@
+ Do not try and run the server with npm run. It is already running.
+---
+description:
+globs:
+alwaysApply: true
+---
