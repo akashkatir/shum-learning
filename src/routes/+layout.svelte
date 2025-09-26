@@ -23,7 +23,7 @@
 {@render children?.()}
 
 <footer class="app-footer">
-	<p>Made by Easan and Akash - 2025</p>
+	<p>Made by Easan and Akash - Jai Kailasa Parampara - 2025</p>
 </footer>
 
 <style>

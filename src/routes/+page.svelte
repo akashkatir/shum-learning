@@ -653,7 +653,7 @@
 
 	.i-concepts-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		gap: 1.5rem;
 	}
 
@@ -732,7 +732,7 @@
 		}
 
 		.i-concepts-grid {
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
