@@ -23,6 +23,36 @@
 {@render children?.()}
 
 <style>
+	:global(:root) {
+		/* Palette - HEX */
+		--tea-green: #d5e9c7;
+		--sky-magenta: #b865af;
+		--yellow-green: #c0d361;
+		--cambridge-blue: #8cc29a;
+		--olivine: #8eb561;
+
+		/* Palette - RGB for alpha usage */
+		--tea-green-rgb: 213, 233, 199;
+		--sky-magenta-rgb: 184, 101, 175;
+		--yellow-green-rgb: 192, 211, 97;
+		--cambridge-blue-rgb: 140, 194, 154;
+		--olivine-rgb: 142, 181, 97;
+
+		/* Gradients */
+		--gradient-brand: linear-gradient(
+			135deg,
+			var(--tea-green),
+			var(--sky-magenta),
+			var(--yellow-green),
+			var(--cambridge-blue),
+			var(--olivine)
+		);
+		--gradient-primary: linear-gradient(135deg, var(--sky-magenta), var(--cambridge-blue));
+		--gradient-primary-hover: linear-gradient(135deg, var(--cambridge-blue), var(--sky-magenta));
+		--gradient-success: linear-gradient(135deg, var(--olivine), var(--yellow-green));
+		--gradient-success-hover: linear-gradient(135deg, var(--yellow-green), var(--olivine));
+	}
+
 	:global(*),
 	:global(*::before),
 	:global(*::after) {
@@ -37,7 +67,7 @@
 			BlinkMacSystemFont,
 			'Segoe UI',
 			sans-serif;
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		background: var(--gradient-brand);
 		background-attachment: fixed;
 		color: #1a202c;
 		line-height: 1.6;

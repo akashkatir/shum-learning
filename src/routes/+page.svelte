@@ -124,10 +124,6 @@
 		color: #1a202c;
 		letter-spacing: -0.02em;
 		font-weight: 700;
-		background: linear-gradient(135deg, #667eea, #764ba2);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
 	}
 
 	.hero__text p {
@@ -144,10 +140,10 @@
 		font-weight: 600;
 		border: none;
 		border-radius: 50px;
-		background: linear-gradient(135deg, #667eea, #764ba2);
+		background: var(--gradient-primary);
 		color: white;
 		cursor: pointer;
-		box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+		box-shadow: 0 15px 35px rgba(var(--cambridge-blue-rgb), 0.35);
 		transition: all 0.3s ease;
 		position: relative;
 		overflow: hidden;
@@ -155,8 +151,8 @@
 
 	.hero__text button:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 20px 40px rgba(102, 126, 234, 0.5);
-		background: linear-gradient(135deg, #5a6fd8, #6b46a3);
+		box-shadow: 0 20px 40px rgba(var(--cambridge-blue-rgb), 0.45);
+		background: var(--gradient-primary-hover);
 	}
 
 	.hero__text button:active {
@@ -164,11 +160,12 @@
 	}
 
 	.hero__text button.is-complete {
-		background: linear-gradient(135deg, #48bb78, #38a169);
+		background: var(--sky-magenta);
 	}
 
 	.hero__text button.is-complete:hover {
-		background: linear-gradient(135deg, #38a169, #2f855a);
+		background: var(--sky-magenta);
+		filter: brightness(1.1);
 	}
 
 	.hero__image {
@@ -213,10 +210,6 @@
 		text-align: center;
 		color: #1a202c;
 		font-weight: 600;
-		background: linear-gradient(135deg, #667eea, #764ba2);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
 	}
 
 	.lessons ul {
@@ -231,17 +224,17 @@
 	.lessons li {
 		background: rgba(255, 255, 255, 0.9);
 		border-radius: 20px;
-		box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+		box-shadow: 0 15px 40px rgba(var(--sky-magenta-rgb), 0.15);
 		padding: 2rem;
 		box-sizing: border-box;
-		border: 1px solid rgba(102, 126, 234, 0.2);
+		border: 1px solid rgba(var(--sky-magenta-rgb), 0.22);
 		transition: all 0.3s ease;
 		backdrop-filter: blur(10px);
 	}
 
 	.lessons li:hover {
 		transform: translateY(-5px);
-		box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
+		box-shadow: 0 20px 50px rgba(var(--sky-magenta-rgb), 0.25);
 		background: rgba(255, 255, 255, 0.95);
 	}
 
@@ -255,7 +248,7 @@
 	.lesson__number {
 		font-size: 0.95rem;
 		font-weight: 600;
-		color: #667eea;
+		color: var(--sky-magenta);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 	}

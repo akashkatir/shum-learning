@@ -38,9 +38,9 @@
 				<h1>{lesson.title}</h1>
 				<p class="lesson__objective">{lesson.objective}</p>
 			</div>
-			<button class:completed={isLessonCompleted()} on:click={markComplete}>
+			<!-- <button class:completed={isLessonCompleted()} on:click={markComplete}>
 				{isLessonCompleted() ? 'Mark as Incomplete' : 'Mark Lesson Complete'}
-			</button>
+			</button> -->
 		</header>
 
 		<section class="section vocabulary">
@@ -140,36 +140,8 @@
 		flex-direction: column;
 		gap: 2rem;
 		align-items: flex-start;
-		border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+		border-bottom: 2px solid rgba(var(--sky-magenta-rgb), 0.15);
 		padding-bottom: 2rem;
-	}
-
-	.lesson__header button {
-		align-self: stretch;
-		padding: 1rem 2.5rem;
-		font-size: 1.1rem;
-		font-weight: 600;
-		border: none;
-		border-radius: 50px;
-		color: white;
-		background: linear-gradient(135deg, #667eea, #764ba2);
-		cursor: pointer;
-		box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
-		transition: all 0.3s ease;
-	}
-
-	.lesson__header button.completed {
-		background: linear-gradient(135deg, #48bb78, #38a169);
-	}
-
-	.lesson__header button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
-		background: linear-gradient(135deg, #5a6fd8, #6b46a3);
-	}
-
-	.lesson__header button.completed:hover {
-		background: linear-gradient(135deg, #38a169, #2f855a);
 	}
 
 	.lesson__index {
@@ -177,7 +149,7 @@
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-size: 0.95rem;
-		color: #667eea;
+		color: var(--sky-magenta);
 	}
 
 	.lesson__header h1 {
@@ -185,10 +157,6 @@
 		font-size: clamp(2.4rem, 4vw, 3.2rem);
 		color: #1a202c;
 		font-weight: 700;
-		background: linear-gradient(135deg, #667eea, #764ba2);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
 	}
 
 	.lesson__objective {
@@ -203,15 +171,15 @@
 		background: rgba(255, 255, 255, 0.8);
 		border-radius: 20px;
 		padding: 2rem;
-		box-shadow: 0 12px 35px rgba(102, 126, 234, 0.12);
-		border: 1px solid rgba(102, 126, 234, 0.15);
+		box-shadow: 0 12px 35px rgba(var(--sky-magenta-rgb), 0.12);
+		border: 1px solid rgba(var(--sky-magenta-rgb), 0.18);
 		backdrop-filter: blur(5px);
 		transition: all 0.3s ease;
 	}
 
 	.section:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 18px 40px rgba(102, 126, 234, 0.18);
+		box-shadow: 0 18px 40px rgba(var(--sky-magenta-rgb), 0.18);
 		background: rgba(255, 255, 255, 0.9);
 	}
 
@@ -221,10 +189,6 @@
 		font-size: 1.7rem;
 		color: #1a202c;
 		font-weight: 600;
-		background: linear-gradient(135deg, #667eea, #764ba2);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
 	}
 
 	.vocabulary__grid {
@@ -237,8 +201,8 @@
 		padding: 1.5rem;
 		background: rgba(255, 255, 255, 0.9);
 		border-radius: 18px;
-		box-shadow: 0 8px 25px rgba(102, 126, 234, 0.1);
-		border: 1px solid rgba(102, 126, 234, 0.15);
+		box-shadow: 0 8px 25px rgba(var(--sky-magenta-rgb), 0.1);
+		border: 1px solid rgba(var(--sky-magenta-rgb), 0.16);
 		display: flex;
 		flex-direction: column;
 		gap: 0.6rem;
@@ -248,7 +212,7 @@
 
 	.vocabulary__entry:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+		box-shadow: 0 12px 30px rgba(var(--sky-magenta-rgb), 0.2);
 		background: rgba(255, 255, 255, 0.95);
 	}
 
@@ -257,10 +221,6 @@
 		font-size: 1.4rem;
 		color: #1a202c;
 		font-weight: 600;
-		background: linear-gradient(135deg, #667eea, #764ba2);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
 	}
 
 	.vocabulary__entry .pronunciation {
@@ -305,8 +265,8 @@
 		padding: 1.5rem;
 		border-radius: 18px;
 		background: rgba(255, 255, 255, 0.9);
-		border: 1px solid rgba(118, 75, 162, 0.2);
-		box-shadow: 0 8px 25px rgba(118, 75, 162, 0.15);
+		border: 1px solid rgba(var(--sky-magenta-rgb), 0.22);
+		box-shadow: 0 8px 25px rgba(var(--sky-magenta-rgb), 0.16);
 		display: flex;
 		flex-direction: column;
 		gap: 0.7rem;
@@ -316,7 +276,7 @@
 
 	.example__entry:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 12px 30px rgba(118, 75, 162, 0.25);
+		box-shadow: 0 12px 30px rgba(var(--sky-magenta-rgb), 0.24);
 		background: rgba(255, 255, 255, 0.95);
 	}
 
@@ -325,10 +285,6 @@
 		font-size: 1.3rem;
 		color: #1a202c;
 		font-weight: 600;
-		background: linear-gradient(135deg, #764ba2, #667eea);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
 	}
 
 	.example__entry .english {
@@ -355,16 +311,16 @@
 	.practice li {
 		padding: 1.2rem 1.5rem;
 		border-radius: 16px;
-		background: rgba(102, 126, 234, 0.08);
+		background: rgba(var(--cambridge-blue-rgb), 0.1);
 		color: #1a202c;
-		border: 1px solid rgba(102, 126, 234, 0.15);
+		border: 1px solid rgba(var(--cambridge-blue-rgb), 0.18);
 		transition: all 0.3s ease;
 	}
 
 	.practice li:hover {
 		transform: translateY(-1px);
-		background: rgba(102, 126, 234, 0.12);
-		box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+		background: rgba(var(--cambridge-blue-rgb), 0.16);
+		box-shadow: 0 4px 15px rgba(var(--cambridge-blue-rgb), 0.12);
 	}
 
 	.tip p {
@@ -380,7 +336,7 @@
 		flex-direction: column;
 		gap: 1.5rem;
 		align-items: flex-start;
-		border-top: 2px solid rgba(102, 126, 234, 0.1);
+		border-top: 2px solid rgba(var(--sky-magenta-rgb), 0.15);
 		padding-top: 2rem;
 	}
 
@@ -395,39 +351,39 @@
 	}
 
 	.lesson-nav button.primary {
-		background: linear-gradient(135deg, #667eea, #764ba2);
+		background: var(--gradient-primary);
 		color: white;
-		box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+		box-shadow: 0 12px 30px rgba(var(--cambridge-blue-rgb), 0.3);
 	}
 
 	.lesson-nav button.primary:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-		background: linear-gradient(135deg, #5a6fd8, #6b46a3);
+		box-shadow: 0 15px 35px rgba(var(--cambridge-blue-rgb), 0.4);
+		background: var(--gradient-primary-hover);
 	}
 
 	.lesson-nav button.primary:disabled {
-		background: rgba(102, 126, 234, 0.3);
+		background: rgba(var(--cambridge-blue-rgb), 0.3);
 		cursor: not-allowed;
 		box-shadow: none;
 		transform: none;
 	}
 
 	.lesson-nav button.secondary {
-		background: rgba(102, 126, 234, 0.1);
-		color: #667eea;
-		border: 1px solid rgba(102, 126, 234, 0.2);
+		background: rgba(var(--sky-magenta-rgb), 0.12);
+		color: var(--sky-magenta);
+		border: 1px solid rgba(var(--sky-magenta-rgb), 0.22);
 	}
 
 	.lesson-nav button.secondary:hover {
 		transform: translateY(-1px);
-		background: rgba(102, 126, 234, 0.15);
-		box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+		background: rgba(var(--sky-magenta-rgb), 0.18);
+		box-shadow: 0 8px 20px rgba(var(--sky-magenta-rgb), 0.2);
 	}
 
 	.lesson-nav button.secondary:disabled {
-		background: rgba(102, 126, 234, 0.05);
-		color: rgba(102, 126, 234, 0.4);
+		background: rgba(var(--sky-magenta-rgb), 0.08);
+		color: rgba(var(--sky-magenta-rgb), 0.5);
 		cursor: not-allowed;
 		transform: none;
 		box-shadow: none;
@@ -443,11 +399,6 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-		}
-
-		.lesson__header button {
-			align-self: center;
-			width: auto;
 		}
 
 		.lesson-nav {
