@@ -73,19 +73,19 @@
 					class="meditator-center"
 				/>
 			</div>
+		</div>
 
-			<!-- Planet Visibility Slider -->
-			<div class="planet-slider">
-				<label for="planet-count">Planets: {visiblePlanets}</label>
-				<input
-					id="planet-count"
-					type="range"
-					min="0"
-					max={maxPlanets}
-					bind:value={visiblePlanets}
-					class="slider"
-				/>
-			</div>
+		<!-- Planet Visibility Slider -->
+		<div class="planet-slider">
+			<label for="planet-count">Planets: {visiblePlanets}</label>
+			<input
+				id="planet-count"
+				type="range"
+				min="0"
+				max={maxPlanets}
+				bind:value={visiblePlanets}
+				class="slider"
+			/>
 		</div>
 	</section>
 
@@ -152,6 +152,7 @@
 	}
 
 	.hero {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
