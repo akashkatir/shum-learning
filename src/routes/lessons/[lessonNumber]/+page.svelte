@@ -110,6 +110,7 @@
 				<button
 					class="primary"
 					disabled={!nextLessonNumber}
+					title={!nextLessonNumber ? 'Lesson 4 coming soon' : ''}
 					on:click={() => goToLesson(nextLessonNumber)}
 				>
 					Next
