@@ -78,6 +78,13 @@
 		min-height: 100vh;
 	}
 
+	/* Prevent horizontal scroll on mobile due to wide inner elements */
+	:global(html),
+	:global(body) {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
 	:global(*, *::before, *::after) {
 		box-sizing: border-box;
 	}

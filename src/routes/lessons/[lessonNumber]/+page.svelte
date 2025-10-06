@@ -411,7 +411,9 @@
 		bottom: calc(100% + 8px);
 		left: 50%;
 		transform: translateX(-50%);
-		white-space: nowrap;
+		/* Allow wrapping on small screens to avoid overflow */
+		white-space: normal;
+		max-width: min(90vw, 260px);
 		background: rgba(17, 24, 39, 0.95);
 		color: #fff;
 		padding: 0.5rem 0.75rem;

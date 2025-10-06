@@ -747,6 +747,35 @@
 	}
 
 	@media (max-width: 600px) {
+		.hero__image {
+			max-width: 100%;
+			overflow: hidden; /* clip orbits */
+		}
+
+		.orbital-system {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 1 / 1; /* maintain square */
+		}
+
+		/* scale down fixed-position planets by scaling container */
+		.orbit-ring-1 {
+			width: 76%;
+			height: 76%;
+		}
+		.orbit-ring-2 {
+			width: 88%;
+			height: 88%;
+		}
+		.orbit-ring-3 {
+			width: 100%;
+			height: 100%;
+		}
+
+		.meditator-center {
+			width: 60%;
+			height: 60%;
+		}
 		.planet-slider {
 			bottom: 10px;
 			right: 10px;
