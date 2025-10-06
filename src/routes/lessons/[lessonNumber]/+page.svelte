@@ -8,17 +8,6 @@
 
 	$: ({ lesson, nextLessonNumber, previousLessonNumber, lessonPosition } = data);
 
-	// Debug log
-	$: console.log('Lesson Page State:', {
-		currentLesson: lesson.lessonNumber,
-		lessonTitle: lesson.title,
-		nextLessonNumber,
-		previousLessonNumber,
-		lessonPosition,
-		isNextDisabled: !nextLessonNumber,
-		progressState: $progressStore
-	});
-
 	const markComplete = () => {
 		progressStore.toggleLesson(lesson.lessonNumber);
 	};
@@ -118,14 +107,18 @@
 				>
 					Previous
 				</button>
-				<button
-					class="primary"
-					disabled={!nextLessonNumber}
-					title={!nextLessonNumber ? 'Lesson 4 coming soon' : ''}
-					on:click={() => goToLesson(nextLessonNumber)}
-				>
-					Next
-				</button>
+				<div class="lesson-nav__tooltip-wrapper">
+					<button
+						class="primary"
+						disabled={!nextLessonNumber}
+						on:click={() => goToLesson(nextLessonNumber)}
+					>
+						Next
+					</button>
+					{#if !nextLessonNumber}
+						<div class="lesson-nav__tooltip" role="tooltip">Lesson 4 coming soon</div>
+					{/if}
+				</div>
 			</div>
 		</nav>
 	</main>
@@ -404,6 +397,50 @@
 	.lesson-nav__links {
 		display: flex;
 		gap: 1rem;
+	}
+
+	/* Tooltip wrapper ensures positioning context */
+	.lesson-nav__tooltip-wrapper {
+		position: relative;
+		display: inline-block;
+	}
+
+	/* Tooltip bubble */
+	.lesson-nav__tooltip {
+		position: absolute;
+		bottom: calc(100% + 8px);
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		background: rgba(17, 24, 39, 0.95);
+		color: #fff;
+		padding: 0.5rem 0.75rem;
+		border-radius: 8px;
+		font-size: 0.9rem;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+		pointer-events: none;
+		opacity: 0;
+		transition:
+			opacity 0.15s ease,
+			transform 0.15s ease;
+		transform-origin: bottom center;
+	}
+
+	.lesson-nav__tooltip::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 6px solid transparent;
+		border-top-color: rgba(17, 24, 39, 0.95);
+	}
+
+	/* Show tooltip on hover of wrapper or disabled button */
+	.lesson-nav__tooltip-wrapper:hover .lesson-nav__tooltip,
+	.lesson-nav__tooltip-wrapper:focus-within .lesson-nav__tooltip {
+		opacity: 1;
+		transform: translateX(-50%) translateY(-2px);
 	}
 
 	@media (min-width: 900px) {
