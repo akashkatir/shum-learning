@@ -8,6 +8,17 @@
 
 	$: ({ lesson, nextLessonNumber, previousLessonNumber, lessonPosition } = data);
 
+	// Debug log
+	$: console.log('Lesson Page State:', {
+		currentLesson: lesson.lessonNumber,
+		lessonTitle: lesson.title,
+		nextLessonNumber,
+		previousLessonNumber,
+		lessonPosition,
+		isNextDisabled: !nextLessonNumber,
+		progressState: $progressStore
+	});
+
 	const markComplete = () => {
 		progressStore.toggleLesson(lesson.lessonNumber);
 	};
