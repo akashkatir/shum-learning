@@ -213,6 +213,8 @@
 	.progress-bubble {
 		width: 32px;
 		height: 32px;
+		min-width: 32px;
+		min-height: 32px;
 		border-radius: 50%;
 		border: 2px solid rgba(var(--sky-magenta-rgb), 0.3);
 		background: white;
@@ -227,9 +229,17 @@
 		position: relative;
 		z-index: 2;
 		flex-shrink: 0;
+		padding: 0;
+		margin: 0;
+		outline: none;
+		overflow: hidden;
 	}
 
-	.progress-bubble:hover {
+	.progress-bubble:focus {
+		outline: none;
+	}
+
+	.progress-bubble:not(.active):hover {
 		transform: scale(1.15);
 		border-color: var(--sky-magenta);
 		background: rgba(var(--sky-magenta-rgb), 0.1);
@@ -237,11 +247,16 @@
 	}
 
 	.progress-bubble.active {
-		background: var(--gradient-primary);
-		border-color: transparent;
+		background: var(--gradient-primary) !important;
+		border: none;
 		color: white;
 		box-shadow: 0 4px 15px rgba(var(--cambridge-blue-rgb), 0.4);
 		transform: scale(1.2);
+	}
+
+	.progress-bubble.active:hover {
+		transform: scale(1.25);
+		box-shadow: 0 6px 18px rgba(var(--cambridge-blue-rgb), 0.5);
 	}
 
 	.progress-bubble.completed {
