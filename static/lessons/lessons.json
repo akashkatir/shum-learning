@@ -504,15 +504,15 @@
                 }
             ],
             "syntaxNotes": [
-                "**Asking Questions:** A question is immediately known because a phrase will begin with a word like **bii** or **kamm** or some other Shum request for more information. These can also be used when embedding information in a phrase, such as in *Limvaji kamm luhling satasim* ('Be alert where you walk').",
+                "**Asking Questions:** A question is immediately known because a phrase will begin with a word like **bi** or **kamm** or some other Shum request for more information. These can also be used when embedding information in a phrase, such as in *Limvaji kamm luhling satasim* ('Be alert where you walk').",
                 "**Non-Shum Words:** You can incorporate non-Shum words (like proper names or places) into expressions. For example: *Ining vumnimbi <Kauai>*. For clarity in writing, the non-Shum word can be put in angle brackets (< >).",
                 "**Absence of Tense and Gender:** In the Shum perspective, we are pure awareness, soul beings living in the eternal Now. Therefore, grammatical gender and time-indicating tense are not part of the syntax."
             ],
             "examplePhrases": [
                 {
-                    "shum": "Bii kavuum rehmnam mum vasaruh?",
+                    "shum": "Bi kavuum rehmnam mum vasaruh?",
                     "english": "Are you going to the temple today?",
-                    "explanation": "Starts with 'Bii' to indicate a yes/no question."
+                    "explanation": "Starts with 'Bi' to indicate a yes/no question."
                 },
                 {
                     "shum": "Vaji zanalíng mum vasaruh.",
