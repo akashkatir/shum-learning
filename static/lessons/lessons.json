@@ -377,27 +377,27 @@
                 {
                     "shum": "Limbuhtye ehshumcha.",
                     "english": "Please call (me).",
-                    "explanation": "Implied subject (me) is a common feature in Shum."
+                    "explanation": null
                 },
                 {
                     "shum": "Zaungdi nimm shumcha.",
                     "english": "Text (me).",
-                    "explanation": "A direct command, literally 'communicate you cell phone.'"
+                    "explanation": null
                 },
                 {
                     "shum": "Inamshum ungdi chadii ining.",
                     "english": "Read email from me.",
-                    "explanation": "**chadii ining** indicates the source of the object."
+                    "explanation": null
                 },
                 {
                     "shum": "Chashum tyemm inamshum ungdi.",
                     "english": "(I have) happy feelings because (I) read (your) email.",
-                    "explanation": "**Tyemm** introduces the reason or justification for the feeling/state."
+                    "explanation": null
                 },
                 {
                     "shum": "Inamshum tyeshum. Bam.",
                     "english": "(I am) reading my Shum notes (and) seeing into the fourth dimension.",
-                    "explanation": "Connects the act of reading **tyeshum** with the deeper inner experience **Bam**."
+                    "explanation": null
                 }
             ],
             "practice": [
@@ -512,32 +512,32 @@
                 {
                     "shum": "Bi kavuum rehmnam mum vasaruh?",
                     "english": "Are you going to the temple today?",
-                    "explanation": "Starts with 'Bi' to indicate a yes/no question."
+                    "explanation": null
                 },
                 {
                     "shum": "Vaji zanalíng mum vasaruh.",
                     "english": "Rain is expected today.",
-                    "explanation": "Uses 'zanalíng' to express anticipation."
+                    "explanation": null
                 },
                 {
                     "shum": "Limbuhtye kyzanim luhling nim vaji nalíng.",
                     "english": "Please protect yourself with a raincoat.",
-                    "explanation": "A polite request using 'Limbuhtye' (likely 'please' or 'a good way')."
+                    "explanation": null
                 },
                 {
                     "shum": "Limvaji kamm luhling satasim.",
                     "english": "Be alert where you walk.",
-                    "explanation": "Uses 'Limvaji' (being careful) and 'kamm' to embed the context of 'where you walk.'"
+                    "explanation": null
                 },
                 {
                     "shum": "Kamm Vaji, unga chanam ohna.",
                     "english": "When raining, soil becomes muddy.",
-                    "explanation": "'Kamm Vaji' sets the condition ('When it is rain')."
+                    "explanation": null
                 },
                 {
                     "shum": "Maa asim chavuum chamam dimam tyemm chali nam' maguh.",
                     "english": "Many people come to the Aadheenam to see the sacred forest.",
-                    "explanation": "A complex sentence describing the action (coming) and the purpose (to see the sacred forest)."
+                    "explanation": null
                 }
             ],
             "practice": [
