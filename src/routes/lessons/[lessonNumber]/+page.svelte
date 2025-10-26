@@ -18,13 +18,13 @@
 	};
 
 	const goToNextLesson = () => {
-		if (!nextLessonNumber) return;
-		// Save to local storage when clicking next
 		if (typeof localStorage !== 'undefined') {
-			console.log('Saving to local storage', lesson.lessonNumber);
 			localStorage.setItem(`${lesson.lessonNumber}`, 'true');
 		}
-		goto(`/lessons/${nextLessonNumber}`);
+
+		if (nextLessonNumber) {
+			goto(`/lessons/${nextLessonNumber}`);
+		}
 	};
 
 	// Check if a lesson is completed based on localStorage
@@ -79,9 +79,6 @@
 				<h1>{lesson.title}</h1>
 				<p class="lesson__objective">{@html formatBold(lesson.objective)}</p>
 			</div>
-			<!-- <button class:completed={isLessonCompleted()} on:click={markComplete}>
-				{isLessonCompleted() ? 'Mark as Incomplete' : 'Mark Lesson Complete'}
-			</button> -->
 		</header>
 
 		<section class="section vocabulary">
@@ -149,7 +146,11 @@
 					Previous
 				</button>
 				<div class="lesson-nav__tooltip-wrapper">
-					<button class="primary" disabled={!nextLessonNumber} on:click={goToNextLesson}>
+					<button
+						class="primary"
+						class:visually-disabled={!nextLessonNumber}
+						on:click={goToNextLesson}
+					>
 						Next
 					</button>
 					{#if !nextLessonNumber}
@@ -494,6 +495,19 @@
 		cursor: not-allowed;
 		box-shadow: none;
 		transform: none;
+	}
+
+	.lesson-nav button.primary.visually-disabled {
+		background: rgba(var(--cambridge-blue-rgb), 0.3);
+		cursor: not-allowed;
+		box-shadow: none;
+		transform: none;
+	}
+
+	.lesson-nav button.primary.visually-disabled:hover {
+		background: rgba(var(--cambridge-blue-rgb), 0.3);
+		transform: none;
+		box-shadow: none;
 	}
 
 	.lesson-nav button.secondary {
