@@ -28,6 +28,12 @@
 	});
 
 	const isLessonCompleted = () => $progressStore.completedLessons.includes(lesson.lessonNumber);
+
+	// Helper function to convert **text** to <strong>text</strong>
+	const formatBold = (text: string | undefined): string => {
+		if (!text) return '';
+		return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+	};
 </script>
 
 {#key lesson.lessonNumber}
@@ -36,7 +42,7 @@
 			<div>
 				<p class="lesson__index">Lesson {lesson.lessonNumber} of {lessonPosition.total}</p>
 				<h1>{lesson.title}</h1>
-				<p class="lesson__objective">{lesson.objective}</p>
+				<p class="lesson__objective">{@html formatBold(lesson.objective)}</p>
 			</div>
 			<!-- <button class:completed={isLessonCompleted()} on:click={markComplete}>
 				{isLessonCompleted() ? 'Mark as Incomplete' : 'Mark Lesson Complete'}
@@ -50,9 +56,9 @@
 					<article class="card vocabulary__entry">
 						<h3>{entry.shum}</h3>
 						<p class="pronunciation">{entry.pronunciation}</p>
-						<p class="english">{entry.english}</p>
+						<p class="english">{@html formatBold(entry.english)}</p>
 						{#if entry.literalMeaning}
-							<p class="literal">{entry.literalMeaning}</p>
+							<p class="literal">{@html formatBold(entry.literalMeaning)}</p>
 						{/if}
 					</article>
 				{/each}
@@ -63,7 +69,7 @@
 			<h2>Syntax Notes</h2>
 			<ul>
 				{#each lesson.syntaxNotes as note}
-					<li>{note}</li>
+					<li>{@html formatBold(note)}</li>
 				{/each}
 			</ul>
 		</section>
@@ -74,9 +80,9 @@
 				{#each lesson.examplePhrases as example}
 					<article class="card example__entry">
 						<h3>{example.shum}</h3>
-						<p class="english">{example.english}</p>
+						<p class="english">{@html formatBold(example.english)}</p>
 						{#if example.explanation}
-							<p class="explanation">{example.explanation}</p>
+							<p class="explanation">{@html formatBold(example.explanation)}</p>
 						{/if}
 					</article>
 				{/each}
@@ -87,14 +93,14 @@
 			<h2>Practice</h2>
 			<ul>
 				{#each lesson.practice as item}
-					<li>{item}</li>
+					<li>{@html formatBold(item)}</li>
 				{/each}
 			</ul>
 		</section>
 
 		<section class="section tip">
 			<h2>Tip</h2>
-			<p>{lesson.tip}</p>
+			<p>{@html formatBold(lesson.tip)}</p>
 		</section>
 
 		<nav class="lesson-nav">
