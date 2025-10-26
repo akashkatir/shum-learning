@@ -17,6 +17,22 @@
 		goto(`/lessons/${lessonNumber}`);
 	};
 
+	const goToNextLesson = () => {
+		if (!nextLessonNumber) return;
+		// Save to local storage when clicking next
+		if (typeof localStorage !== 'undefined') {
+			console.log('Saving to local storage', lesson.lessonNumber);
+			localStorage.setItem(`${lesson.lessonNumber}`, 'true');
+		}
+		goto(`/lessons/${nextLessonNumber}`);
+	};
+
+	// Check if a lesson is completed based on localStorage
+	const isLessonCompletedInStorage = (lessonNum: number): boolean => {
+		if (typeof localStorage === 'undefined') return false;
+		return localStorage.getItem(`${lessonNum}`) === 'true';
+	};
+
 	const unsubscribe = progressStore.subscribe((state) => {
 		if (!state.started) {
 			progressStore.start();
@@ -40,7 +56,26 @@
 	<main class="lesson">
 		<header class="lesson__header">
 			<div>
-				<p class="lesson__index">Lesson {lesson.lessonNumber} of {lessonPosition.total}</p>
+				<div class="lesson__index-container">
+					<p class="lesson__index">Lesson {lesson.lessonNumber} of {lessonPosition.total}</p>
+					<div class="progress-bubbles">
+						{#each Array(lessonPosition.total) as _, index}
+							{#if index > 0}
+								<div class="progress-line" class:active={isLessonCompletedInStorage(index)}></div>
+							{/if}
+							<button
+								class="progress-bubble"
+								class:active={index + 1 === lesson.lessonNumber}
+								class:completed={isLessonCompletedInStorage(index + 1)}
+								on:click={() => goToLesson(index + 1)}
+								aria-label="Go to lesson {index + 1}"
+								title="Lesson {index + 1}"
+							>
+								{index + 1}
+							</button>
+						{/each}
+					</div>
+				</div>
 				<h1>{lesson.title}</h1>
 				<p class="lesson__objective">{@html formatBold(lesson.objective)}</p>
 			</div>
@@ -114,11 +149,7 @@
 					Previous
 				</button>
 				<div class="lesson-nav__tooltip-wrapper">
-					<button
-						class="primary"
-						disabled={!nextLessonNumber}
-						on:click={() => goToLesson(nextLessonNumber)}
-					>
+					<button class="primary" disabled={!nextLessonNumber} on:click={goToNextLesson}>
 						Next
 					</button>
 					{#if !nextLessonNumber}
@@ -157,12 +188,80 @@
 		padding-bottom: 2rem;
 	}
 
+	.lesson__index-container {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+
 	.lesson__index {
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-size: 0.95rem;
 		color: var(--sky-magenta);
+		margin: 0;
+	}
+
+	.progress-bubbles {
+		display: flex;
+		align-items: center;
+		gap: 0;
+	}
+
+	.progress-bubble {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		border: 2px solid rgba(var(--sky-magenta-rgb), 0.3);
+		background: white;
+		color: #718096;
+		font-size: 0.85rem;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		position: relative;
+		z-index: 2;
+		flex-shrink: 0;
+	}
+
+	.progress-bubble:hover {
+		transform: scale(1.15);
+		border-color: var(--sky-magenta);
+		background: rgba(var(--sky-magenta-rgb), 0.1);
+		box-shadow: 0 4px 12px rgba(var(--sky-magenta-rgb), 0.3);
+	}
+
+	.progress-bubble.active {
+		background: var(--gradient-primary);
+		border-color: transparent;
+		color: white;
+		box-shadow: 0 4px 15px rgba(var(--cambridge-blue-rgb), 0.4);
+		transform: scale(1.2);
+	}
+
+	.progress-bubble.completed {
+		background: rgba(var(--sky-magenta-rgb), 0.15);
+		border-color: var(--sky-magenta);
+		color: var(--sky-magenta);
+	}
+
+	.progress-line {
+		width: 24px;
+		height: 2px;
+		background: rgba(var(--sky-magenta-rgb), 0.2);
+		transition: all 0.3s ease;
+		position: relative;
+		z-index: 1;
+		flex-shrink: 0;
+	}
+
+	.progress-line.active {
+		background: var(--sky-magenta);
 	}
 
 	.lesson__header h1 {
