@@ -116,7 +116,9 @@
 						Next
 					</button>
 					{#if !nextLessonNumber}
-						<div class="lesson-nav__tooltip" role="tooltip">Lesson 4 coming soon</div>
+						<div class="lesson-nav__tooltip" role="tooltip">
+							Lesson {previousLessonNumber + 2} coming soon
+						</div>
 					{/if}
 				</div>
 			</div>

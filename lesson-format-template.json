@@ -1,0 +1,42 @@
+{
+    "lessonNumber": 5,
+    "title": "Lesson Title Here",
+    "objective": "A brief statement of what the learner will accomplish in this lesson.",
+    "vocabulary": [
+        {
+            "shum": "Word in Shum language",
+            "pronunciation": "Phonetic pronunciation (e.g., bee-HAYEE-shoom)",
+            "english": "English translation or meaning",
+            "literalMeaning": "Optional: The deeper or literal meaning of the word. Use null if not applicable."
+        },
+        {
+            "shum": "Another Shum word",
+            "pronunciation": "another-pronunciation",
+            "english": "Another meaning",
+            "literalMeaning": null
+        }
+    ],
+    "syntaxNotes": [
+        "Syntax rule or explanation 1: Describe grammar patterns, word order, or structural notes.",
+        "Syntax rule or explanation 2: Include examples where helpful.",
+        "Syntax rule or explanation 3: Keep each note concise but clear."
+    ],
+    "examplePhrases": [
+        {
+            "shum": "Example phrase in Shum",
+            "english": "English translation of the phrase",
+            "explanation": "Optional: Additional context or breakdown. Use null if not needed."
+        },
+        {
+            "shum": "Another example phrase",
+            "english": "Another translation",
+            "explanation": null
+        }
+    ],
+    "practice": [
+        "Practice exercise 1: A concrete activity for the learner to try.",
+        "Practice exercise 2: Another hands-on practice suggestion.",
+        "Practice exercise 3: Can include speaking, writing, or conversational practice."
+    ],
+    "tip": "A single helpful tip or insight for the learner to enhance their understanding or practice of this lesson."
+}
