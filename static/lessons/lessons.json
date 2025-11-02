@@ -74,9 +74,9 @@
             ],
             "examplePhrases": [
                 {
-                    "shum": "Bihyishum, ining [Isani].",
-                    "english": "Hello, I am [Isani].",
-                    "explanation": "My external personality is [Isani], with awareness in contentment."
+                    "shum": "Bihyishum, ining <Isani>.",
+                    "english": "Hello, I am <Isani>.",
+                    "explanation": "My external personality is <Isani>, with awareness in contentment."
                 },
                 {
                     "shum": "Kamm nimf? Zasiba.",
@@ -90,7 +90,7 @@
                 }
             ],
             "practice": [
-                "Greet someone: Say 'Bihyishum' and introduce yourself with 'Ining [your name].'",
+                "Greet someone: Say 'Bihyishum' and introduce yourself with 'Ining <your name>.'",
                 "Ask 'Kamm nimf?' and respond with 'Zasiba,' 'Chashum,' or 'Sika.'",
                 "Part with 'Dikamaja' to express a friendly departure."
             ],
@@ -479,12 +479,6 @@
                     "literalMeaning": "Used for the rudraksha forest"
                 },
                 {
-                    "shum": "Vumungreh",
-                    "pronunciation": "VOOM-ung-reh",
-                    "english": "A concept, often a place or spiritual reality that is 'beyond,' perhaps like 'heaven' or 'the other side.' (Context suggests this might be 'Aadheenam' in some contexts of this teaching.)",
-                    "literalMeaning": null
-                },
-                {
                     "shum": "Sifa",
                     "pronunciation": "SEEF-ah",
                     "english": "Siva’s creation dance",
@@ -505,8 +499,8 @@
             ],
             "syntaxNotes": [
                 "One immediately knows a question is being asked because a phrase will begin with bii or kamm or some other Shum request for more information. These are sometimes also used when embedding information in a phrase, such as **Limvaji kamm luhling satasim**.",
-                "One can add non-Shum words to expressions, such as \"**Ining vumnimbi <Kauai>**\" For clarify in writing, one can put the non-Shum word in <> these tags.",
-                "Since in the Shum perspective we are, pure awareness, soul beings living in the eternal Now, grammatical gender and time-indicating tense are not part of the syntax."
+                "One can add non-Shum words to expressions, such as \"**Ining vumnimbi <Kauai>**\" For clarity in writing, one can put the non-Shum word in <> these tags.",
+                "Since in the Shum perspective we are pure awareness, soul beings living in the eternal Now, grammatical gender and time-indicating tense are not part of the syntax."
             ],
             "examplePhrases": [
                 {
@@ -520,12 +514,12 @@
                     "explanation": null
                 },
                 {
-                    "shum": "Limbuhtye kyzanim luhling nim vaji nalíng.",
+                    "shum": "Limbuhtye kyzanim luhling la nim vaji nalíng.",
                     "english": "Please protect yourself with a raincoat.",
                     "explanation": null
                 },
                 {
-                    "shum": "Limvaji kamm luhling satasim.",
+                    "shum": "Limvaji kamm luhling la satasim.",
                     "english": "Be alert where you walk.",
                     "explanation": null
                 },
@@ -543,9 +537,9 @@
             "practice": [
                 "Ask someone \"**Kamm luhling kavum**\" Answer \"**Ining kavum rehmnam mum vasaruh**.\"",
                 "Advise: \"**Vaji zanalíng mum vasaruh Cha’a vaji nalíng.**\" Answer \"**Mulingshum**.\"",
-                "Ask \"**Kamm luhling chalil nam’ maguh**.\" Answer \"**Vasaruh ining chali**.\""
+                "Ask \"**Kamm luhling chali nam’ maguh**.\" Answer \"**Vasaruh ining chali**.\""
             ],
-            "tip": " To see **Nam’ maguh**, search “rudraksha forest” in Google."
+            "tip": " To see photos and a map of **Nam’ maguh**, search “rudraksha forest” in Google."
         }
     ],
     "learningTips": [
