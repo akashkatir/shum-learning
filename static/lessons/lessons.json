@@ -7,7 +7,7 @@
             "vocabulary": [
                 {
                     "shum": "Bihyishum",
-                    "pronunciation": "bee-HAYEE-shoom",
+                    "pronunciation": "bee-HYEE-shoom",
                     "english": "Hello",
                     "literalMeaning": "Contentment under all circumstances."
                 },
@@ -19,7 +19,7 @@
                 },
                 {
                     "shum": "Ining",
-                    "pronunciation": "IN-ning",
+                    "pronunciation": "IN-ing",
                     "english": "I / My external personality",
                     "literalMeaning": "Used for 'I' when referring to outward identity."
                 },
@@ -37,7 +37,7 @@
                 },
                 {
                     "shum": "Kamm nimf?",
-                    "pronunciation": "KAM NEE-mf",
+                    "pronunciation": "KAHM NEE-mf",
                     "english": "How are you?",
                     "literalMeaning": "Where is your awareness traveling?"
                 },
@@ -68,15 +68,15 @@
             ],
             "syntaxNotes": [
                 "Shum syntax is flexible, often Subject-Action-Object (SVO), but the subject (nimf, awareness) is often implied and omitted.",
-                "No articles ('a,' 'the') are used, keeping expressions concise.",
+                "Few articles ('a,' 'the') are used, keeping expressions concise.",
                 "Questions start with interrogatives: Bi (what), Kamm (where/when), Chatyem (why).",
                 "Focus is on awareness (nimf) rather than physical self, so questions like 'Kamm nimf?' probe inner states."
             ],
             "examplePhrases": [
                 {
-                    "shum": "Bihyishum, ining <Isani>.",
-                    "english": "Hello, I am <Isani>.",
-                    "explanation": "My external personality is <Isani>, with awareness in contentment."
+                    "shum": "Bihyishum, ining <_____>.",
+                    "english": "Hello, I am <_____>.",
+                    "explanation": "My external personality is <_____>, with awareness in contentment."
                 },
                 {
                     "shum": "Kamm nimf? Zasiba.",
@@ -115,19 +115,19 @@
                 },
                 {
                     "shum": "Limwati",
-                    "pronunciation": "lim-WAH-tee",
+                    "pronunciation": "LEEM-wah-tee",
                     "english": "Want / Desire",
                     "literalMeaning": null
                 },
                 {
-                    "shum": "Kamlimwati",
+                    "shum": "kahm-LEEM-wah-tee",
                     "pronunciation": "kam-lim-WAH-tee",
                     "english": "Superconscious desire",
                     "literalMeaning": "Desire for spiritual unfoldment; superconscious impulse."
                 },
                 {
                     "shum": "Vumnimbi",
-                    "pronunciation": "voom-NIM-bee",
+                    "pronunciation": "voom-NEEM-bee",
                     "english": "Like / Love",
                     "literalMeaning": null
                 },
@@ -139,7 +139,7 @@
                 },
                 {
                     "shum": "Im'°",
-                    "pronunciation": "IM",
+                    "pronunciation": "EEM",
                     "english": "No",
                     "literalMeaning": null
                 },
@@ -157,7 +157,7 @@
                 },
                 {
                     "shum": "Limbuhtye",
-                    "pronunciation": "lim-BUH-tye",
+                    "pronunciation": "LIM-buh-teeyay",
                     "english": "Please",
                     "literalMeaning": null
                 }
@@ -199,7 +199,7 @@
             "vocabulary": [
                 {
                     "shum": "U",
-                    "pronunciation": "OO",
+                    "pronunciation": "UUU",
                     "english": "And",
                     "literalMeaning": null
                 },
@@ -223,12 +223,12 @@
                 },
                 {
                     "shum": "Tyeamli",
-                    "pronunciation": "tye-AM-lee",
+                    "pronunciation": "tEEYAY-awm-lee",
                     "english": "Friend",
                     "literalMeaning": null
                 },
                 {
-                    "shum": "Kamm luhling la kavum?",
+                    "shum": "KAWM-luh-ling la kavum?",
                     "pronunciation": "KAM LOO-ling LAH KAH-voom",
                     "english": "Where are you going (physically)?",
                     "literalMeaning": "Where is your physical being going?"
@@ -248,7 +248,7 @@
             ],
             "syntaxNotes": [
                 "Combine ideas with 'u' (and): e.g., 'Zasiba u limwati tyevum' (I’m good and want water).",
-                "Use 'chamam' for destinations: e.g., 'La kavum chamam bima' (My physical self goes to house).",
+                "Use 'chamam' for destinations: e.g., 'La kavum chamam bima' (My physical being goes to house).",
                 "Questions about physical movement use 'kamm' + 'la' + verb (e.g., 'Kamm luhling la kavum?' = Where are you going physically?).",
                 "Contrast this with 'kamm nimf?' (Where is your awareness?), which probes inner states."
             ],
@@ -289,7 +289,7 @@
                 },
                 {
                     "shum": "Tyetyebuh",
-                    "pronunciation": "tye-tye-buh",
+                    "pronunciation": "TEEYAY-teeyay-buh",
                     "english": "Talking, chatting vibe",
                     "literalMeaning": null
                 },
@@ -307,19 +307,19 @@
                 },
                 {
                     "shum": "Inamshum",
-                    "pronunciation": "EE-nam-shum",
+                    "pronunciation": "EE-nahm-shoom",
                     "english": "Read, decipher written symbols",
                     "literalMeaning": null
                 },
                 {
                     "shum": "Udi",
-                    "pronunciation": "UU-di",
+                    "pronunciation": "UU-dee",
                     "english": "Book, publication; any knowledge source",
                     "literalMeaning": null
                 },
                 {
                     "shum": "Tyeshum",
-                    "pronunciation": "tye-shum",
+                    "pronunciation": "TEEYAY-shoom",
                     "english": "A student’s handwritten book of Shum learning. Also, a room for Shum study and meditation.",
                     "literalMeaning": null
                 },
@@ -331,19 +331,19 @@
                 },
                 {
                     "shum": "Shumcha",
-                    "pronunciation": "shum-cha",
+                    "pronunciation": "shoom-cha",
                     "english": "Cell phone",
                     "literalMeaning": null
                 },
                 {
                     "shum": "Ehshumcha",
-                    "pronunciation": "eh-shum-cha",
+                    "pronunciation": "eh-shoom-cha",
                     "english": "Cell phone conversation",
                     "literalMeaning": null
                 },
                 {
                     "shum": "Tyemm",
-                    "pronunciation": "tyem-mm",
+                    "pronunciation": "TEYAY-mm",
                     "english": "Because, since or providing",
                     "literalMeaning": "Names an area of the mind where it is felt necessary to have reasons in order to proceed."
                 },
@@ -414,7 +414,7 @@
             "vocabulary": [
                 {
                     "shum": "Rehmnam",
-                    "pronunciation": "REHM-nam",
+                    "pronunciation": "REHM-nahm",
                     "english": "temple",
                     "literalMeaning": null
                 },
@@ -432,8 +432,8 @@
                 },
                 {
                     "shum": "Vaji nalíng",
-                    "pronunciation": "VA-jee NA-ling",
-                    "english": "rain coast",
+                    "pronunciation": "VA-jee NAH-ling",
+                    "english": "rain coat",
                     "literalMeaning": null
                 },
                 {
