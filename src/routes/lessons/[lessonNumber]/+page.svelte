@@ -50,6 +50,29 @@
 		if (!text) return '';
 		return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 	};
+	// Audio handling
+	let currentAudio: HTMLAudioElement | null = null;
+	let playingAudioSrc: string | null = null;
+
+	const playAudio = (path: string) => {
+		if (currentAudio) {
+			currentAudio.pause();
+			currentAudio.currentTime = 0;
+			if (playingAudioSrc === path) {
+				playingAudioSrc = null;
+				currentAudio = null;
+				return;
+			}
+		}
+
+		currentAudio = new Audio(path);
+		playingAudioSrc = path;
+		currentAudio.play();
+		currentAudio.onended = () => {
+			playingAudioSrc = null;
+			currentAudio = null;
+		};
+	};
 </script>
 
 {#key lesson.lessonNumber}
@@ -86,6 +109,18 @@
 			<div class="vocabulary__grid">
 				{#each lesson.vocabulary as entry}
 					<article class="card vocabulary__entry">
+						{#if entry.audio}
+							<button
+								class="audio-btn"
+								on:click={() => {
+									if (entry.audio) playAudio(entry.audio);
+								}}
+								class:playing={playingAudioSrc === entry.audio}
+								aria-label="Play audio for {entry.shum}"
+							>
+								<img src="/icons/volumeup.svg" alt="Play audio" />
+							</button>
+						{/if}
 						<h3>{entry.shum}</h3>
 						<p class="pronunciation">{entry.pronunciation}</p>
 						<p class="english">{@html formatBold(entry.english)}</p>
@@ -597,5 +632,56 @@
 		.lesson-nav__links {
 			margin-left: auto;
 		}
+	}
+	/* Audio Button Styles */
+	.vocabulary__entry {
+		position: relative;
+	}
+
+	.audio-btn {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: rgba(var(--sky-magenta-rgb), 0.15);
+		border: 2px solid rgba(var(--sky-magenta-rgb), 0.3);
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		padding: 0;
+		z-index: 10;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.audio-btn:hover {
+		transform: scale(1.1);
+		background: rgba(var(--sky-magenta-rgb), 0.25);
+		border-color: var(--sky-magenta);
+		box-shadow: 0 6px 15px rgba(var(--sky-magenta-rgb), 0.25);
+	}
+
+	.audio-btn.playing {
+		background: var(--sky-magenta);
+		border-color: var(--sky-magenta);
+		box-shadow: 0 0 15px rgba(var(--sky-magenta-rgb), 0.4);
+	}
+
+	.audio-btn.playing img {
+		filter: brightness(0) invert(1);
+	}
+
+	.audio-btn img {
+		width: 22px;
+		height: 22px;
+		opacity: 1;
+		transition: all 0.2s ease;
+	}
+
+	.audio-btn:hover img {
+		opacity: 1;
 	}
 </style>

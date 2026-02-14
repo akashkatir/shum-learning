@@ -3,6 +3,7 @@ export type VocabularyEntry = {
     pronunciation: string;
     english: string;
     literalMeaning: string | null;
+    audio?: string;
 };
 
 export type ExamplePhrase = {

@@ -9,61 +9,71 @@
                     "shum": "Bihyishum",
                     "pronunciation": "bee-HYEE-shoom",
                     "english": "Hello",
-                    "literalMeaning": "Contentment under all circumstances."
+                    "literalMeaning": "Contentment under all circumstances.",
+                    "audio": "/audio/lesson1/Bihyishum.m4a"
                 },
                 {
                     "shum": "Dikamaja",
                     "pronunciation": "dee-kah-MAH-jah",
                     "english": "Goodbye",
-                    "literalMeaning": "Going and will return (like 'see you again')."
+                    "literalMeaning": "Going and will return (like 'see you again').",
+                    "audio": "/audio/lesson1/Dikamaja.m4a"
                 },
                 {
                     "shum": "Ining",
                     "pronunciation": "IN-ing",
                     "english": "I / My external personality",
-                    "literalMeaning": "Used for 'I' when referring to outward identity."
+                    "literalMeaning": "Used for 'I' when referring to outward identity.",
+                    "audio": "/audio/lesson1/Ining.m4a"
                 },
                 {
                     "shum": "Nimf",
                     "pronunciation": "NEE-mf",
                     "english": "I (as awareness)",
-                    "literalMeaning": "I, as awareness traveling through the mind’s dimensions."
+                    "literalMeaning": "I, as awareness traveling through the mind’s dimensions.",
+                    "audio": "/audio/lesson1/Nimf.m4a"
                 },
                 {
                     "shum": "Luhling",
                     "pronunciation": "LUH-ling",
                     "english": "You (outwardly)",
-                    "literalMeaning": "Your external personality."
+                    "literalMeaning": "Your external personality.",
+                    "audio": "/audio/lesson1/Luhling.m4a"
                 },
                 {
                     "shum": "Kamm nimf?",
                     "pronunciation": "KAHM NEE-mf",
                     "english": "How are you?",
-                    "literalMeaning": "Where is your awareness traveling?"
+                    "literalMeaning": "Where is your awareness traveling?",
+                    "audio": "/audio/lesson1/Kamm nimf.m4a"
                 },
                 {
                     "shum": "Zasiba",
                     "pronunciation": "zah-SEE-bah",
                     "english": "Well-being",
-                    "literalMeaning": "A state of inner harmony."
+                    "literalMeaning": "A state of inner harmony.",
+                    "audio": "/audio/lesson1/Zasiba.m4a"
                 },
                 {
                     "shum": "Tyebabalingna",
                     "pronunciation": "tye-bah-bah-LING-nah",
                     "english": "Happy feelings",
-                    "literalMeaning": "Consciousness of happy feelings."
+                    "literalMeaning": "Consciousness of happy feelings.",
+                    "audio": "/audio/lesson1/Tyebabalingna.m4a"
                 },
                 {
                     "shum": "Chashum",
                     "pronunciation": "CHAH-shoom",
                     "english": "Good",
-                    "literalMeaning": "The ability to light up from within."
+                    "literalMeaning": "The ability to light up from within.",
+                    "audio": "/audio/lesson1/Chashum.m4a"
                 },
                 {
                     "shum": "Sika",
                     "pronunciation": "SEE-kah",
                     "english": "Bad",
-                    "literalMeaning": "An unhappy inner condition."
+                    "literalMeaning": "An unhappy inner condition.",
+                    "audio": "/audio/lesson1/Sika.m4a"
                 }
             ],
             "syntaxNotes": [
