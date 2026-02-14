@@ -4,7 +4,7 @@ import subprocess
 import shutil
 
 # Make sure to run this from the project root
-AUDIO_DIR = os.path.join("static", "audio")
+AUDIO_DIR = os.path.join("static", "audio", "toTrim")
 
 # Recursive search for m4a files
 M4A_FILES = []
