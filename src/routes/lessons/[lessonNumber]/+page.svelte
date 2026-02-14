@@ -355,12 +355,13 @@
 	}
 
 	.vocabulary__grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-		gap: 1.25rem;
+		column-width: 240px;
+		column-gap: 1.25rem;
 	}
 
 	.vocabulary__entry {
+		break-inside: avoid-column;
+		margin-bottom: 1.25rem;
 		padding: 1.5rem;
 		background: rgba(255, 255, 255, 0.9);
 		border-radius: 18px;
@@ -419,12 +420,13 @@
 	}
 
 	.examples__grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-		gap: 1.25rem;
+		column-width: 240px;
+		column-gap: 1.25rem;
 	}
 
 	.example__entry {
+		break-inside: avoid-column;
+		margin-bottom: 1.25rem;
 		padding: 1.5rem;
 		border-radius: 18px;
 		background: rgba(255, 255, 255, 0.9);
