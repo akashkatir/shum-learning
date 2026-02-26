@@ -145,7 +145,19 @@
 			<h2>Example Phrases</h2>
 			<div class="examples__grid">
 				{#each lesson.examplePhrases as example}
-					<article class="card example__entry">
+					<article class="card example__entry" class:has-audio={!!example.audio}>
+						{#if example.audio}
+							<button
+								class="audio-btn"
+								on:click={() => {
+									if (example.audio) playAudio(example.audio);
+								}}
+								class:playing={playingAudioSrc === example.audio}
+								aria-label="Play audio for {example.shum}"
+							>
+								<img src="/icons/volumeup.svg" alt="Play audio" />
+							</button>
+						{/if}
 						<h3>{example.shum}</h3>
 						<p class="english">{@html formatBold(example.english)}</p>
 						{#if example.explanation}
@@ -425,6 +437,7 @@
 	}
 
 	.example__entry {
+		position: relative;
 		break-inside: avoid-column;
 		margin-bottom: 1.25rem;
 		padding: 1.5rem;
@@ -437,6 +450,13 @@
 		gap: 0.7rem;
 		transition: all 0.3s ease;
 		backdrop-filter: blur(5px);
+	}
+
+	.example__entry.has-audio h3 {
+		padding-right: 3.5rem;
+		min-height: 40px;
+		display: flex;
+		align-items: center;
 	}
 
 	.example__entry:hover {

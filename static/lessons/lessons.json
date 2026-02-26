@@ -86,17 +86,20 @@
                 {
                     "shum": "Bihyishum, ining <_____>.",
                     "english": "Hello, I am <_____>.",
-                    "explanation": "My external personality is <_____>, with awareness in contentment."
+                    "explanation": "My external personality is <_____>, with awareness in contentment.",
+                    "audio": "/audio/lesson1/Bihyishum-Ining.m4a"
                 },
                 {
                     "shum": "Kamm nimf? Zasiba.",
                     "english": "How are you? I’m in well-being.",
-                    "explanation": "Where’s your awareness? In harmony."
+                    "explanation": "Where’s your awareness? In harmony.",
+                    "audio": "/audio/lesson1/Kamm-nimf-Zasiba.m4a"
                 },
                 {
                     "shum": "Tyebabalingna, dikamaja!",
                     "english": "Happy feelings, goodbye!",
-                    "explanation": "My awareness is happy, and I’ll return."
+                    "explanation": "My awareness is happy, and I’ll return.",
+                    "audio": "/audio/lesson1/Tyebabalingna-dikamaja.m4a"
                 }
             ],
             "practice": [

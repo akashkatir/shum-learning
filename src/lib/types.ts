@@ -10,6 +10,7 @@ export type ExamplePhrase = {
     shum: string;
     english: string;
     explanation: string | null;
+    audio?: string;
 };
 
 export type Lesson = {
