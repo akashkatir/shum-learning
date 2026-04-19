@@ -118,37 +118,43 @@
                     "shum": "Bi símm'°?",
                     "pronunciation": "BEE SIMM",
                     "english": "What is this?",
-                    "literalMeaning": "Símm'° = thing in any dimension; ° indicates 'mm'."
+                    "literalMeaning": "Símm'° = thing in any dimension; ° indicates 'mm'.",
+                    "audio": "/audio/lesson2/2 Bi simm.m4a"
                 },
                 {
                     "shum": "Bi",
                     "pronunciation": "BEE",
                     "english": "What",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Bi.m4a"
                 },
                 {
                     "shum": "Limwati",
                     "pronunciation": "LEEM-wah-tee",
                     "english": "Want / Desire",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Limwati.m4a"
                 },
                 {
                     "shum": "kahm-LEEM-wah-tee",
                     "pronunciation": "kam-lim-WAH-tee",
                     "english": "Superconscious desire",
-                    "literalMeaning": "Desire for spiritual unfoldment; superconscious impulse."
+                    "literalMeaning": "Desire for spiritual unfoldment; superconscious impulse.",
+                    "audio": "/audio/lesson2/2 Kamlimwati.m4a"
                 },
                 {
                     "shum": "Vumnimbi",
                     "pronunciation": "voom-NEEM-bee",
                     "english": "Like / Love",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Vumnimbi.m4a"
                 },
                 {
                     "shum": "Mii",
                     "pronunciation": "MEE",
                     "english": "Yes",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Mii.m4a"
                 },
                 {
                     "shum": "Im'°",
@@ -160,19 +166,22 @@
                     "shum": "Tyevum",
                     "pronunciation": "TYE-voom",
                     "english": "Water",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Tyevum.m4a"
                 },
                 {
                     "shum": "Unuh",
                     "pronunciation": "UU-nuh",
                     "english": "Food",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Unuh.m4a"
                 },
                 {
                     "shum": "Limbuhtye",
                     "pronunciation": "LIM-buh-teeyay",
                     "english": "Please",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson2/2 Limbuhtye.m4a"
                 }
             ],
             "syntaxNotes": [
@@ -185,17 +194,20 @@
                 {
                     "shum": "Bi luhling limwati kamni? Kamni cha’a.",
                     "english": "Do you want coffee? Here’s coffee.",
-                    "explanation": "Do you want coffee? Coffee appears."
+                    "explanation": "Do you want coffee? Coffee appears.",
+                    "audio": "/audio/lesson2/2 Bi luhling limwati kamni.m4a"
                 },
                 {
                     "shum": "Limwati tyevum, limbuhtye.",
                     "english": "I want water, please.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson2/2 Limwati tyevum, limbuhtye.m4a"
                 },
                 {
                     "shum": "Luhling vumnimbi unuh? Mii, vumnimbi.",
                     "english": "Do you like food? Yes, I like.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson2/2 Luhling vumnimbi unuh. Mii, vumnimbi.m4a"
                 }
             ],
             "practice": [
@@ -241,7 +253,7 @@
                     "literalMeaning": null
                 },
                 {
-                    "shum": "KAWM-luh-ling la kavum?",
+                    "shum": "Kam luhling la kavum?",
                     "pronunciation": "KAM LOO-ling LAH KAH-voom",
                     "english": "Where are you going (physically)?",
                     "literalMeaning": "Where is your physical being going?"
@@ -272,7 +284,7 @@
                     "explanation": "My physical self goes to the house and loves food."
                 },
                 {
-                    "shum": "Kamm luhling la kavum? Ining kavum chamam tyeamli.",
+                    "shum": "Kamm luhling la kavum? Ining kavum chali tyeamli.",
                     "english": "Where are you going? I go to see a friend.",
                     "explanation": null
                 },
