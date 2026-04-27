@@ -253,10 +253,10 @@
                     "literalMeaning": null
                 },
                 {
-                    "shum": "Kam luhling la kavum?",
-                    "pronunciation": "KAM LOO-ling LAH KAH-voom",
-                    "english": "Where are you going (physically)?",
-                    "literalMeaning": "Where is your physical being going?"
+                    "shum": "Kamm",
+                    "pronunciation": "KAHM",
+                    "english": "Where, when, as part of a request",
+                    "literalMeaning": null
                 },
                 {
                     "shum": "Chamam",
@@ -444,6 +444,12 @@
                     "literalMeaning": null
                 },
                 {
+                    "shum": "Dimam",
+                    "pronunciation": "DEE-mahm",
+                    "english": "Aadheenam, monastery",
+                    "literalMeaning": null
+                },
+                {
                     "shum": "Vaji",
                     "pronunciation": "VA-jee",
                     "english": "rain",
@@ -529,7 +535,7 @@
             ],
             "examplePhrases": [
                 {
-                    "shum": "Bi kavuum rehmnam mum vasaruh?",
+                    "shum": "Bi kavum rehmnam mum vasaruh?",
                     "english": "Are you going to the temple today?",
                     "explanation": null
                 },
@@ -544,7 +550,7 @@
                     "explanation": null
                 },
                 {
-                    "shum": "Limvaji kamm luhling la satasim.",
+                    "shum": "Limvaji nimm luhling la satasim.",
                     "english": "Be alert where you walk.",
                     "explanation": null
                 },
@@ -554,7 +560,7 @@
                     "explanation": null
                 },
                 {
-                    "shum": "Maa asim chavuum chamam dimam tyemm chali nam' maguh.",
+                    "shum": "Maa asim chavum chamam dimam tyemm chali nam' maguh.",
                     "english": "Many people come to the Aadheenam to see the sacred forest.",
                     "explanation": null
                 }
