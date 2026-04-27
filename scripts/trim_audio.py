@@ -66,7 +66,7 @@ for file_path in M4A_FILES:
              continue
         duration = float(duration_str)
         
-        new_duration = duration - 0.1
+        new_duration = duration - 0.2
         if new_duration <= 0:
             print(f"Skipping {file_path}: too short ({duration}s)")
             continue

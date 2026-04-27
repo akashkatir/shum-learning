@@ -226,49 +226,57 @@
                     "shum": "U",
                     "pronunciation": "UUU",
                     "english": "And",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson3/3 U.m4a"
                 },
                 {
                     "shum": "Kavum",
                     "pronunciation": "KAH-voom",
                     "english": "Go",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson3/3 Kavum.m4a"
                 },
                 {
                     "shum": "Bima",
                     "pronunciation": "BEE-mah",
                     "english": "House",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson3/3 Bima.m4a"
                 },
                 {
                     "shum": "La",
                     "pronunciation": "LAH",
                     "english": "Physical aspect of being",
-                    "literalMeaning": "Used when focusing on body consciousness."
+                    "literalMeaning": "Used when focusing on body consciousness.",
+                    "audio": "/audio/lesson3/3 La.m4a"
                 },
                 {
                     "shum": "Tyeamli",
                     "pronunciation": "tEEYAY-awm-lee",
                     "english": "Friend",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson3/3 Tyeamli.m4a"
                 },
                 {
                     "shum": "Kamm",
                     "pronunciation": "KAHM",
                     "english": "Where, when, as part of a request",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson3/3 Kamm.m4a"
                 },
                 {
                     "shum": "Chamam",
                     "pronunciation": "CHAH-mam",
                     "english": "To",
-                    "literalMeaning": "To meet, connect, touch."
+                    "literalMeaning": "To meet, connect, touch.",
+                    "audio": "/audio/lesson3/3 Chamam.m4a"
                 },
                 {
                     "shum": "Chana",
                     "pronunciation": "CHAH-nah",
                     "english": "Eat",
-                    "literalMeaning": "Swallow, assimilate."
+                    "literalMeaning": "Swallow, assimilate.",
+                    "audio": "/audio/lesson3/3 Chana.m4a"
                 }
             ],
             "syntaxNotes": [
@@ -281,17 +289,20 @@
                 {
                     "shum": "La kavum chamam bima u vumnimbi unuh.",
                     "english": "I go to the house and like food.",
-                    "explanation": "My physical self goes to the house and loves food."
+                    "explanation": "My physical self goes to the house and loves food.",
+                    "audio": "/audio/lesson3/3 La kavum chamam....m4a"
                 },
                 {
                     "shum": "Kamm luhling la kavum? Ining kavum chali tyeamli.",
                     "english": "Where are you going? I go to see a friend.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson3/3 Kamm luhling la....m4a"
                 },
                 {
                     "shum": "Bi luhling limwati tyevum u unuh? Mii, limwati.",
                     "english": "Do you want water and food? Yes, I want.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson3/3 Bi luhling limwati....m4a"
                 }
             ],
             "practice": [
@@ -310,85 +321,99 @@
                     "shum": "Limbuhtye",
                     "pronunciation": "Leem-buh-tye",
                     "english": "Please",
-                    "literalMeaning": "Guiding people and animals through love"
+                    "literalMeaning": "Guiding people and animals through love",
+                    "audio": "/audio/lesson4/4 Limbhutye.m4a"
                 },
                 {
                     "shum": "Tyetyebuh",
                     "pronunciation": "TEEYAY-teeyay-buh",
                     "english": "Talking, chatting vibe",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Tyetyebuh.m4a"
                 },
                 {
                     "shum": "Ungdi",
                     "pronunciation": "ung-dee",
                     "english": "Letter, email, text",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Ungdi.m4a"
                 },
                 {
                     "shum": "Zaungdi",
                     "pronunciation": "za-ung-dee",
                     "english": "To write or communicate",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Zaungdi.m4a"
                 },
                 {
                     "shum": "Inamshum",
                     "pronunciation": "EE-nahm-shoom",
                     "english": "Read, decipher written symbols",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Inamshum.m4a"
                 },
                 {
                     "shum": "Udi",
                     "pronunciation": "UU-dee",
                     "english": "Book, publication; any knowledge source",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Udi.m4a"
                 },
                 {
                     "shum": "Tyeshum",
                     "pronunciation": "TEEYAY-shoom",
                     "english": "A student’s handwritten book of Shum learning. Also, a room for Shum study and meditation.",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Tyeshum.m4a"
                 },
                 {
                     "shum": "Bam",
                     "pronunciation": "Bawm",
                     "english": "Astral sight, reading; looking from the third dimension into the fourth and fifth dimensions and even deeper inner states through reading",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Bam.m4a"
                 },
                 {
                     "shum": "Shumcha",
                     "pronunciation": "shoom-cha",
                     "english": "Cell phone",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Shumcha.m4a"
                 },
                 {
                     "shum": "Ehshumcha",
                     "pronunciation": "eh-shoom-cha",
                     "english": "Cell phone conversation",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Ehshumcha.m4a"
                 },
                 {
                     "shum": "Tyemm",
                     "pronunciation": "TEYAY-mm",
                     "english": "Because, since or providing",
-                    "literalMeaning": "Names an area of the mind where it is felt necessary to have reasons in order to proceed."
+                    "literalMeaning": "Names an area of the mind where it is felt necessary to have reasons in order to proceed.",
+                    "audio": "/audio/lesson4/4 Tyemm.m4a"
                 },
                 {
                     "shum": "Rehli",
                     "pronunciation": "reh-lee",
                     "english": "Voice or sound containing thought",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Rehli.m4a"
                 },
                 {
                     "shum": "Imhi",
                     "pronunciation": "Eem-hee",
                     "english": "A computer, as well as software programs and apps to facilitate communication and process information",
-                    "literalMeaning": "A contraption comprised of millions of transistor crystals which communicates and exchanges information worldwide."
+                    "literalMeaning": "A contraption comprised of millions of transistor crystals which communicates and exchanges information worldwide.",
+                    "audio": "/audio/lesson4/4 Imhi.m4a"
                 },
                 {
                     "shum": "Faimhi",
                     "pronunciation": "fa-Eem-hee",
                     "english": "A one-way or multi-way communication with others through a computer.",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson4/4 Famimhi.m4a"
                 }
             ],
             "syntaxNotes": [
@@ -402,27 +427,32 @@
                 {
                     "shum": "Limbuhtye ehshumcha.",
                     "english": "Please call (me).",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson4/4 Limbuhtye ehshumcha.m4a"
                 },
                 {
                     "shum": "Zaungdi nimm shumcha.",
                     "english": "Text (me).",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson4/4 Zaungdi nimm shumcha.m4a"
                 },
                 {
                     "shum": "Inamshum ungdi chadii ining.",
                     "english": "Read email from me.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson4/4 Inamshum ungdi chadii ining.m4a"
                 },
                 {
                     "shum": "Chashum tyemm inamshum ungdi.",
                     "english": "(I have) happy feelings because (I) read (your) email.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson4/4 Chashum tyem inamshum ungdi.m4a"
                 },
                 {
                     "shum": "Inamshum tyeshum. Bam.",
                     "english": "(I am) reading my Shum notes (and) seeing into the fourth dimension.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson4/4 Inamshum tyeshum. Bam..m4a"
                 }
             ],
             "practice": [
@@ -441,7 +471,8 @@
                     "shum": "Rehmnam",
                     "pronunciation": "REHM-nahm",
                     "english": "temple",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Rehmnam.m4a"
                 },
                 {
                     "shum": "Dimam",
@@ -453,49 +484,57 @@
                     "shum": "Vaji",
                     "pronunciation": "VA-jee",
                     "english": "rain",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 vaji.m4a"
                 },
                 {
                     "shum": "zanalíng",
                     "pronunciation": "ZA-nah-ling",
                     "english": "expect, anticipate, foresee",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 zanaling.m4a"
                 },
                 {
                     "shum": "Vaji nalíng",
                     "pronunciation": "VA-jee NAH-ling",
                     "english": "rain coat",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Vaji naling.m4a"
                 },
                 {
                     "shum": "Limvaji",
                     "pronunciation": "LEEM-va-jee",
                     "english": "Being careful, walking in the rain without getting wet",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 limvaji.m4a"
                 },
                 {
                     "shum": "Kyzanim",
                     "pronunciation": "KAI-za-neem",
                     "english": "cover, protect",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Kyzanim.m4a"
                 },
                 {
                     "shum": "Satasim",
                     "pronunciation": "SA-ta-seem",
                     "english": "to walk",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Satasim.m4a"
                 },
                 {
                     "shum": "Unga",
                     "pronunciation": "UNG-ah",
                     "english": "earth, soil",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Unga.m4a"
                 },
                 {
                     "shum": "Ohna",
                     "pronunciation": "OH-nah",
                     "english": "mud",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Ohna.m4a"
                 },
                 {
                     "shum": "Chali",
@@ -507,19 +546,22 @@
                     "shum": "nam' maguh",
                     "pronunciation": "NAH-mm MA-guh",
                     "english": "holy forest, sacred forest",
-                    "literalMeaning": "Used for the rudraksha forest"
+                    "literalMeaning": "Used for the rudraksha forest",
+                    "audio": "/audio/lesson5/5 Nam' maguh.m4a"
                 },
                 {
                     "shum": "Sifa",
                     "pronunciation": "SEEF-ah",
                     "english": "Siva’s creation dance",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Sifa.m4a"
                 },
                 {
                     "shum": "símkani",
                     "pronunciation": "SIM-ka-nee",
                     "english": "worship of an image of a God",
-                    "literalMeaning": null
+                    "literalMeaning": null,
+                    "audio": "/audio/lesson5/5 Simkani.m4a"
                 },
                 {
                     "shum": "Jakaung",
@@ -542,12 +584,14 @@
                 {
                     "shum": "Vaji zanalíng mum vasaruh.",
                     "english": "Rain is expected today.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson5/5 Vaji zanaling....m4a"
                 },
                 {
                     "shum": "Limbuhtye kyzanim luhling la nim vaji nalíng.",
                     "english": "Please protect yourself with a raincoat.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson5/5 Limbuhtye kyzanim....m4a"
                 },
                 {
                     "shum": "Limvaji nimm luhling la satasim.",
@@ -557,12 +601,14 @@
                 {
                     "shum": "Kamm Vaji, unga chanam ohna.",
                     "english": "When raining, soil becomes muddy.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson5/5 Kamm Vaji ....m4a"
                 },
                 {
                     "shum": "Maa asim chavum chamam dimam tyemm chali nam' maguh.",
                     "english": "Many people come to the Aadheenam to see the sacred forest.",
-                    "explanation": null
+                    "explanation": null,
+                    "audio": "/audio/lesson5/5 Maa asim chavum....m4a"
                 }
             ],
             "practice": [
