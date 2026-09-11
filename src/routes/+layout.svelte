@@ -15,7 +15,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
@@ -28,6 +28,11 @@
 
 <style>
 	:global(:root) {
+		--font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+		--hero-purple: #9252a5;
+		--hero-purple-hover: #7f4292;
+		--page-ivory: #fbfaf7;
+
 		/* Palette - HEX */
 		--tea-green: #d5e9c7;
 		--sky-magenta: #b865af;
@@ -71,11 +76,21 @@
 			BlinkMacSystemFont,
 			'Segoe UI',
 			sans-serif;
-		background: var(--gradient-brand);
+		background:
+			radial-gradient(ellipse at 78% 22%, rgba(181, 199, 165, 0.12), transparent 48%),
+			radial-gradient(ellipse at 28% 4%, rgba(201, 170, 207, 0.08), transparent 42%),
+			var(--page-ivory);
 		background-attachment: fixed;
 		color: #1a202c;
 		line-height: 1.6;
 		min-height: 100vh;
+	}
+
+	:global(h1),
+	:global(h2),
+	:global(h3),
+	:global(h4) {
+		font-family: var(--font-heading);
 	}
 
 	/* Prevent horizontal scroll on mobile due to wide inner elements */
@@ -103,10 +118,9 @@
 
 	.app-footer p {
 		margin: 0;
-		color: white;
+		color: #77717b;
 		font-size: 0.85rem;
 		font-weight: 400;
 		opacity: 0.8;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 	}
 </style>

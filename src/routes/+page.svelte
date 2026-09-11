@@ -18,78 +18,92 @@
 		? $progressStore.completedLessons.includes(firstLessonNumber)
 		: false;
 
-	// Planet visibility control
-	let visiblePlanets = 15; // Default to show all planets
+	let visiblePlanets = 15;
 	const maxPlanets = 15;
+	const orbitalRings = [
+		[
+			{ number: 1, angle: -65, size: 14, tone: 'sage' },
+			{ number: 2, angle: 20, size: 12, tone: 'gold' },
+			{ number: 10, angle: 95, size: 18, tone: 'gold' },
+			{ number: 11, angle: 160, size: 16, tone: 'sage' }
+		],
+		[
+			{ number: 3, angle: -115, size: 20, tone: 'sage' },
+			{ number: 4, angle: -70, size: 8, tone: 'gold' },
+			{ number: 5, angle: 35, size: 11, tone: 'sage' },
+			{ number: 12, angle: 90, size: 12, tone: 'sage' },
+			{ number: 13, angle: 145, size: 18, tone: 'purple' }
+		],
+		[
+			{ number: 6, angle: -90, size: 22, tone: 'purple' },
+			{ number: 7, angle: -35, size: 14, tone: 'sage' },
+			{ number: 8, angle: 25, size: 23, tone: 'purple' },
+			{ number: 9, angle: 80, size: 16, tone: 'gold' },
+			{ number: 14, angle: 155, size: 11, tone: 'gold' },
+			{ number: 15, angle: 205, size: 8, tone: 'gold' }
+		]
+	];
 </script>
 
 <main class="layout">
-	<section class="hero">
+	<section class="hero" aria-labelledby="hero-title">
 		<div class="hero__text">
-			<h1>Conversational <span class="shum-title">Shum Primer</span></h1>
-			<p>
-				This primer introduces conversational Shum, a mystical language designed for clear and
-				simple communication of inner life. Each lesson builds on the previous one, covering
-				essential vocabulary, syntax, and phrases. Practice pronouncing words phonetically as
-				written.
+			<p class="hero__eyebrow">Conversational Shum</p>
+			<h1 id="hero-title">A language for <em>your inner life.</em></h1>
+			<p class="hero__subtitle">The Conversational Shum Primer</p>
+			<p class="hero__description">
+				Explore a mystical language for clear, simple communication of inner life. Build your
+				understanding one lesson at a time, through vocabulary, syntax, and practice.
 			</p>
-			<button class:is-complete={isFirstLessonCompleted} on:click={handleBegin}>
-				Start Lesson 1</button
-			>
+			<div class="hero__actions">
+				<button class:is-complete={isFirstLessonCompleted} on:click={handleBegin}>
+					Start Lesson 1 <span aria-hidden="true">&rarr;</span>
+				</button>
+				<a href="#lesson-overview">Explore the primer <span aria-hidden="true">&rarr;</span></a>
+			</div>
+			<p class="hero__note">Begin with the essentials. Progress at your own pace.</p>
 		</div>
 		<div class="hero__image">
 			<div class="orbital-system">
-				<!-- Ring 1 - Innermost -->
-				<div class="orbit-ring orbit-ring-1">
-					{#if visiblePlanets >= 1}<div class="planet planet-1"></div>{/if}
-					{#if visiblePlanets >= 2}<div class="planet planet-2"></div>{/if}
-					{#if visiblePlanets >= 10}<div class="planet planet-10"></div>{/if}
-					{#if visiblePlanets >= 11}<div class="planet planet-11"></div>{/if}
-				</div>
-
-				<!-- Ring 2 - Middle -->
-				<div class="orbit-ring orbit-ring-2">
-					{#if visiblePlanets >= 3}<div class="planet planet-3"></div>{/if}
-					{#if visiblePlanets >= 4}<div class="planet planet-4"></div>{/if}
-					{#if visiblePlanets >= 5}<div class="planet planet-5"></div>{/if}
-					{#if visiblePlanets >= 12}<div class="planet planet-12"></div>{/if}
-					{#if visiblePlanets >= 13}<div class="planet planet-13"></div>{/if}
-				</div>
-
-				<!-- Ring 3 - Outermost -->
-				<div class="orbit-ring orbit-ring-3">
-					{#if visiblePlanets >= 6}<div class="planet planet-6"></div>{/if}
-					{#if visiblePlanets >= 7}<div class="planet planet-7"></div>{/if}
-					{#if visiblePlanets >= 8}<div class="planet planet-8"></div>{/if}
-					{#if visiblePlanets >= 9}<div class="planet planet-9"></div>{/if}
-					{#if visiblePlanets >= 14}<div class="planet planet-14"></div>{/if}
-					{#if visiblePlanets >= 15}<div class="planet planet-15"></div>{/if}
-				</div>
+				{#each orbitalRings as planets, ringIndex (ringIndex)}
+					<div class="orbit-ring orbit-ring-{ringIndex + 1}" aria-hidden="true">
+						{#each planets as planet (planet.number)}
+							{#if visiblePlanets >= planet.number}
+								<div
+									class="planet planet--{planet.tone}"
+									style="--planet-size: {planet.size}px; left: {50 +
+										50 * Math.cos((planet.angle * Math.PI) / 180)}%; top: {50 +
+										50 * Math.sin((planet.angle * Math.PI) / 180)}%;"
+								></div>
+							{/if}
+						{/each}
+					</div>
+				{/each}
 
 				<!-- Central Meditator Image -->
 				<img
 					src="/images/circle-meditator.png"
 					alt="Meditator illustration"
 					class="meditator-center"
+					fetchpriority="high"
+				/>
+			</div>
+
+			<div class="planet-slider">
+				<label for="planet-count">Planets: {visiblePlanets}</label>
+				<input
+					id="planet-count"
+					type="range"
+					min="0"
+					max={maxPlanets}
+					bind:value={visiblePlanets}
+					class="slider"
 				/>
 			</div>
 		</div>
-
-		<!-- Planet Visibility Slider -->
-		<div class="planet-slider">
-			<label for="planet-count">Planets: {visiblePlanets}</label>
-			<input
-				id="planet-count"
-				type="range"
-				min="0"
-				max={maxPlanets}
-				bind:value={visiblePlanets}
-				class="slider"
-			/>
-		</div>
 	</section>
 
-	<section class="lessons">
+	<section class="lessons" id="lesson-overview">
 		<h2>Lesson Overview</h2>
 		<ul>
 			{#each lessons as lesson}
@@ -153,278 +167,232 @@
 
 	.hero {
 		position: relative;
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
+		display: grid;
+		grid-template-columns: 1.06fr 1fr;
 		align-items: center;
-		justify-content: center;
-		min-height: 80vh;
-		background: rgba(255, 255, 255, 0.95);
-		border-radius: 24px;
-		padding: 3rem 2rem;
-		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.2);
+		align-self: center;
+		gap: clamp(2rem, 4vw, 4.5rem);
+		width: min(1480px, calc(100vw - 96px));
+		min-height: min(850px, calc(100svh - 96px));
+		padding: 2rem 0;
+		isolation: isolate;
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		backdrop-filter: none;
 	}
 
 	.hero__text {
-		max-width: 680px;
-		text-align: center;
+		position: relative;
+		z-index: 1;
+		min-width: 0;
+	}
+
+	.hero__eyebrow {
+		margin: 0 0 1.8rem;
+		color: #6d7d58;
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.32em;
+		text-transform: uppercase;
 	}
 
 	.hero__text h1 {
-		font-size: clamp(2.8rem, 4vw, 4rem);
-		margin-bottom: 1.5rem;
-		color: #1a202c;
-		letter-spacing: -0.02em;
-		font-weight: 700;
+		margin: 0 0 1.7rem;
+		color: #25232c;
+		font-size: clamp(3.5rem, 5.9vw, 6.1rem);
+		font-weight: 500;
+		letter-spacing: -0.045em;
+		line-height: 1.02;
 	}
 
-	.shum-title {
-		font-size: 1.2em;
-		font-weight: 800;
-		background: var(--gradient-brand);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		letter-spacing: -0.03em;
+	.hero__text h1 em {
+		display: block;
+		color: var(--hero-purple);
+		font-weight: 500;
 	}
 
-	.hero__text p {
-		font-size: 1.2rem;
-		line-height: 1.75;
-		margin-bottom: 2.5rem;
-		color: #4a5568;
-		font-weight: 400;
+	.hero__subtitle {
+		margin: 0 0 1.25rem;
+		color: #302d38;
+		font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+		line-height: 1.5;
+		letter-spacing: -0.025em;
 	}
 
-	.hero__text button {
-		padding: 1rem 3rem;
-		font-size: 1.1rem;
-		font-weight: 600;
-		border: none;
+	.hero__description {
+		max-width: 33rem;
+		margin: 0;
+		color: #6b6873;
+		font-size: 1.0625rem;
+		line-height: 1.85;
+	}
+
+	.hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1.5rem 2.5rem;
+		margin-top: 2.2rem;
+	}
+
+	.hero__actions button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		min-height: 3.4rem;
+		padding: 0.9rem 2rem;
+		border: 1px solid transparent;
 		border-radius: 50px;
-		background: var(--gradient-primary);
+		background: var(--hero-purple);
 		color: white;
+		font: inherit;
+		font-size: 0.95rem;
+		font-weight: 500;
 		cursor: pointer;
-		box-shadow: 0 15px 35px rgba(var(--cambridge-blue-rgb), 0.35);
-		transition: all 0.3s ease;
-		position: relative;
-		overflow: hidden;
+		box-shadow: 0 4px 10px rgba(111, 57, 129, 0.12);
+		transition:
+			background 180ms ease,
+			transform 180ms ease,
+			box-shadow 180ms ease;
 	}
 
-	.hero__text button:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 20px 40px rgba(var(--cambridge-blue-rgb), 0.45);
-		background: var(--gradient-primary-hover);
+	.hero__actions button:hover {
+		transform: translateY(-2px);
+		background: var(--hero-purple-hover);
+		box-shadow: 0 6px 16px rgba(111, 57, 129, 0.18);
 	}
 
-	.hero__text button:active {
-		transform: translateY(-1px);
+	.hero__actions button:active {
+		transform: translateY(0);
 	}
 
-	.hero__text button.is-complete {
-		background: var(--gradient-primary);
+	.hero__actions a {
+		display: inline-flex;
+		align-items: center;
+		gap: 1rem;
+		min-height: 44px;
+		color: var(--hero-purple-hover);
+		font-size: 0.875rem;
+		font-weight: 500;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 5px;
 	}
 
-	.hero__text button.is-complete:hover {
-		background: var(--gradient-primary-hover);
+	.hero__actions a:hover {
+		color: var(--hero-purple);
+	}
+
+	.hero__actions span {
+		font-size: 1.35rem;
+		line-height: 1;
+	}
+
+	.hero__actions button:focus-visible,
+	.hero__actions a:focus-visible,
+	.planet-slider .slider:focus-visible {
+		outline: 2px solid var(--hero-purple);
+		outline-offset: 5px;
+	}
+
+	.hero__note {
+		margin: 1rem 0 0;
+		color: #78737d;
+		font-size: 0.75rem;
+		line-height: 1.7;
 	}
 
 	.hero__image {
 		position: relative;
-		max-width: 500px;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		overflow: visible;
+		width: 100%;
+		max-width: min(100%, max(380px, calc(100svh - 240px)));
+		justify-self: center;
+		min-width: 0;
+		padding: 1rem;
+	}
+
+	.hero__image::before {
+		content: '';
+		position: absolute;
+		inset: -8%;
+		z-index: -1;
+		border-radius: 50%;
+		background:
+			radial-gradient(ellipse at 34% 58%, rgba(200, 158, 208, 0.17), transparent 54%),
+			radial-gradient(ellipse at 72% 40%, rgba(169, 197, 147, 0.17), transparent 57%);
+		filter: blur(25px);
+		pointer-events: none;
 	}
 
 	.orbital-system {
 		position: relative;
-		width: 500px;
-		height: 500px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: grid;
+		place-items: center;
+		width: 100%;
+		aspect-ratio: 1;
+		isolation: isolate;
 	}
 
 	.orbit-ring {
 		position: absolute;
-		border: 1px solid rgba(var(--sky-magenta-rgb), 0.1);
-		border-radius: 50%;
 		top: 50%;
 		left: 50%;
+		aspect-ratio: 1;
+		border: 1px solid rgba(178, 151, 89, 0.3);
+		border-radius: 50%;
 		transform: translate(-50%, -50%);
-		/* box-shadow:
-			0 0 15px rgba(var(--sky-magenta-rgb), 0.1),
-			inset 0 0 15px rgba(var(--cambridge-blue-rgb), 0.05); */
+		animation: rotate 100s linear infinite;
+		pointer-events: none;
 	}
 
 	.orbit-ring-1 {
-		width: 380px;
-		height: 380px;
-		animation: rotate 20s linear infinite;
+		width: 80%;
+		border-color: rgba(139, 164, 112, 0.33);
+		animation-duration: 70s;
 	}
 
 	.orbit-ring-2 {
-		width: 440px;
-		height: 440px;
-		animation: rotate 30s linear infinite reverse;
+		width: 90%;
+		animation-duration: 90s;
+		animation-direction: reverse;
 	}
 
 	.orbit-ring-3 {
-		width: 500px;
-		height: 500px;
-		animation: rotate 40s linear infinite;
+		width: 100%;
 	}
 
 	.planet {
 		position: absolute;
+		width: var(--planet-size);
+		height: var(--planet-size);
 		border-radius: 50%;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-		z-index: 2;
+		transform: translate(-50%, -50%);
+		box-shadow: 0 2px 4px rgba(57, 49, 44, 0.2);
 	}
 
-	/* Planet 1, 2, 10, 11 - Ring 1 (210px radius from center for better clearance) */
-	.planet-1 {
-		width: 12px;
-		height: 12px;
-		background: radial-gradient(circle at 30% 30%, var(--tea-green), var(--olivine));
-		top: 3px; /* 250 - 210 - 6 */
-		left: 244px; /* 250 + 0 - 6 */
+	.planet--sage {
+		background: radial-gradient(circle at 30% 25%, #d1dec5, #96b28b 55%, #68865e);
 	}
 
-	.planet-2 {
-		width: 8px;
-		height: 8px;
-		background: radial-gradient(circle at 30% 30%, var(--sky-magenta), var(--cambridge-blue));
-		top: 246px; /* 250 + 0 - 4 */
-		left: 456px; /* 250 + 210 - 4 */
+	.planet--purple {
+		background: radial-gradient(circle at 30% 25%, #d7b7df, #aa75b9 55%, #80528e);
 	}
 
-	.planet-10 {
-		width: 10px;
-		height: 10px;
-		background: radial-gradient(circle at 30% 30%, var(--yellow-green), var(--sky-magenta));
-		top: 455px; /* 250 + 210 - 5 */
-		left: 245px; /* 250 + 0 - 5 */
-	}
-
-	.planet-11 {
-		width: 14px;
-		height: 14px;
-		background: radial-gradient(circle at 30% 30%, var(--cambridge-blue), var(--olivine));
-		top: 243px; /* 250 + 0 - 7 */
-		left: 3px; /* 250 - 210 - 7 */
-	}
-
-	/* Planet 3, 4, 5, 12, 13 - Ring 2 (220px radius from center) */
-	.planet-3 {
-		width: 16px;
-		height: 16px;
-		background: radial-gradient(circle at 30% 30%, var(--yellow-green), var(--tea-green));
-		top: 22px; /* 250 - 220 - 8 */
-		left: 242px; /* 250 + 0 - 8 */
-	}
-
-	.planet-4 {
-		width: 10px;
-		height: 10px;
-		background: radial-gradient(circle at 30% 30%, var(--cambridge-blue), var(--sky-magenta));
-		top: 113px; /* 250 - 220*cos(72°) - 5 */
-		left: 460px; /* 250 + 220*sin(72°) - 5 */
-	}
-
-	.planet-5 {
-		width: 14px;
-		height: 14px;
-		background: radial-gradient(circle at 30% 30%, var(--olivine), var(--yellow-green));
-		top: 384px; /* 250 + 220*cos(144°) - 7 */
-		left: 393px; /* 250 + 220*sin(144°) - 7 */
-	}
-
-	.planet-12 {
-		width: 12px;
-		height: 12px;
-		background: radial-gradient(circle at 30% 30%, var(--olivine), var(--tea-green));
-		top: 387px; /* 250 + 220*cos(216°) - 6 */
-		left: 101px; /* 250 + 220*sin(216°) - 6 */
-	}
-
-	.planet-13 {
-		width: 18px;
-		height: 18px;
-		background: radial-gradient(circle at 30% 30%, var(--sky-magenta), var(--yellow-green));
-		top: 130px; /* 250 - 220*cos(288°) - 9 */
-		left: 22px; /* 250 + 220*sin(288°) - 9 */
-	}
-
-	/* Planet 6, 7, 8, 9, 14, 15 - Ring 3 (250px radius from center) */
-	.planet-6 {
-		width: 18px;
-		height: 18px;
-		background: radial-gradient(circle at 30% 30%, var(--sky-magenta), var(--olivine));
-		top: -9px; /* 250 - 250 - 9 */
-		left: 241px; /* 250 + 0 - 9 */
-	}
-
-	.planet-7 {
-		width: 12px;
-		height: 12px;
-		background: radial-gradient(circle at 30% 30%, var(--tea-green), var(--cambridge-blue));
-		top: 108px; /* 250 - 250*cos(60°) - 6 */
-		left: 460px; /* 250 + 250*sin(60°) - 6 */
-	}
-
-	.planet-8 {
-		width: 20px;
-		height: 20px;
-		background: radial-gradient(circle at 30% 30%, var(--yellow-green), var(--sky-magenta));
-		top: 365px; /* 250 + 250*cos(120°) - 10 */
-		left: 456px; /* 250 + 250*sin(120°) - 10 */
-	}
-
-	.planet-9 {
-		width: 14px;
-		height: 14px;
-		background: radial-gradient(circle at 30% 30%, var(--cambridge-blue), var(--tea-green));
-		top: 493px; /* 250 + 250 - 7 */
-		left: 243px; /* 250 + 0 - 7 */
-	}
-
-	.planet-14 {
-		width: 16px;
-		height: 16px;
-		background: radial-gradient(circle at 30% 30%, var(--tea-green), var(--sky-magenta));
-		top: 365px; /* 250 + 250*cos(240°) - 8 */
-		left: 26px; /* 250 + 250*sin(240°) - 8 */
-	}
-
-	.planet-15 {
-		width: 22px;
-		height: 22px;
-		background: radial-gradient(circle at 30% 30%, var(--yellow-green), var(--cambridge-blue));
-		top: 108px; /* 250 - 250*cos(300°) - 11 */
-		left: 11px; /* 250 + 250*sin(300°) - 11 */
+	.planet--gold {
+		background: radial-gradient(circle at 30% 25%, #e9deaf, #bea15e 55%, #8e743c);
 	}
 
 	.meditator-center {
-		width: 320px;
-		height: 320px;
+		width: 68%;
+		height: 68%;
 		border-radius: 50%;
 		object-fit: cover;
-		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-		/* border: 4px solid rgba(255, 255, 255, 0.8); */
-		transition:
-			transform 0.3s ease,
-			box-shadow 0.3s ease;
-		z-index: 1;
-	}
-
-	.meditator-center:hover {
-		transform: scale(1.05);
-		box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 10px 28px rgba(81, 103, 70, 0.14);
 	}
 
 	@keyframes rotate {
@@ -437,77 +405,67 @@
 	}
 
 	.planet-slider {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		background: rgba(255, 255, 255, 0.95);
-		backdrop-filter: blur(10px);
-		border-radius: 16px;
-		padding: 12px 16px;
-		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.3);
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
-		min-width: 140px;
-		z-index: 10;
+		align-self: flex-end;
+		gap: 0.25rem;
+		width: 150px;
+		margin-top: 1.5rem;
+		margin-right: -0.5rem;
 	}
 
 	.planet-slider label {
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: #4a5568;
-		text-align: center;
-		margin: 0;
+		color: #77707d;
+		font-size: 0.7rem;
+		line-height: 1.5;
 	}
 
 	.planet-slider .slider {
 		-webkit-appearance: none;
 		appearance: none;
 		width: 100%;
-		height: 6px;
+		height: 24px;
+		margin: 0;
 		border-radius: 3px;
-		background: linear-gradient(90deg, #e2e8f0 0%, var(--sky-magenta) 100%);
-		outline: none;
-		opacity: 0.8;
-		transition: opacity 0.3s ease;
+		background: transparent;
+		cursor: pointer;
 	}
 
-	.planet-slider .slider:hover {
-		opacity: 1;
+	.planet-slider .slider::-webkit-slider-runnable-track {
+		height: 4px;
+		border-radius: 3px;
+		background: linear-gradient(90deg, #e6e0e7, #b181be);
+	}
+
+	.planet-slider .slider::-moz-range-track {
+		height: 4px;
+		border-radius: 3px;
+		background: linear-gradient(90deg, #e6e0e7, #b181be);
 	}
 
 	.planet-slider .slider::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		appearance: none;
-		width: 18px;
-		height: 18px;
+		width: 16px;
+		height: 16px;
+		margin-top: -6px;
+		border: none;
 		border-radius: 50%;
-		background: var(--gradient-primary);
-		cursor: pointer;
-		box-shadow: 0 2px 8px rgba(var(--cambridge-blue-rgb), 0.3);
-		transition: all 0.2s ease;
-	}
-
-	.planet-slider .slider::-webkit-slider-thumb:hover {
-		transform: scale(1.1);
-		box-shadow: 0 4px 12px rgba(var(--cambridge-blue-rgb), 0.4);
+		background: var(--hero-purple);
+		box-shadow: 0 2px 4px rgba(111, 57, 129, 0.16);
 	}
 
 	.planet-slider .slider::-moz-range-thumb {
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		background: var(--gradient-primary);
-		cursor: pointer;
+		width: 16px;
+		height: 16px;
 		border: none;
-		box-shadow: 0 2px 8px rgba(var(--cambridge-blue-rgb), 0.3);
-		transition: all 0.2s ease;
+		border-radius: 50%;
+		background: var(--hero-purple);
+		box-shadow: 0 2px 4px rgba(111, 57, 129, 0.16);
 	}
 
-	.planet-slider .slider::-moz-range-thumb:hover {
-		transform: scale(1.1);
-		box-shadow: 0 4px 12px rgba(var(--cambridge-blue-rgb), 0.4);
+	.lessons {
+		scroll-margin-top: 2rem;
 	}
 
 	section {
@@ -703,25 +661,6 @@
 		background: rgba(255, 255, 255, 0.9);
 	}
 
-	@media (min-width: 940px) {
-		.hero {
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-			min-height: 85vh;
-			padding: 4rem 3rem;
-		}
-
-		.hero__text {
-			text-align: left;
-			max-width: 600px;
-		}
-
-		.hero__image {
-			max-width: 500px;
-		}
-	}
-
 	@media (min-width: 700px) {
 		.tips ul {
 			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -746,45 +685,87 @@
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 939px) {
+		.hero {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+			width: min(640px, calc(100vw - 64px));
+			min-height: auto;
+			padding: 2.5rem 0 1rem;
+		}
+
+		.hero__text h1 {
+			font-size: clamp(3.5rem, 9vw, 5rem);
+		}
+
 		.hero__image {
-			max-width: 100%;
-			overflow: hidden; /* clip orbits */
+			width: min(100%, 500px);
+			max-width: none;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero {
+			width: calc(100vw - 48px);
+			padding-top: 0.5rem;
+			gap: 2rem;
 		}
 
-		.orbital-system {
-			width: 100%;
-			height: auto;
-			aspect-ratio: 1 / 1; /* maintain square */
+		.hero__eyebrow {
+			margin-bottom: 1.5rem;
+			font-size: 0.625rem;
+			letter-spacing: 0.26em;
 		}
 
-		/* scale down fixed-position planets by scaling container */
-		.orbit-ring-1 {
-			width: 76%;
-			height: 76%;
-		}
-		.orbit-ring-2 {
-			width: 88%;
-			height: 88%;
-		}
-		.orbit-ring-3 {
-			width: 100%;
-			height: 100%;
+		.hero__text h1 {
+			font-size: clamp(2.8rem, 11.8vw, 4.5rem);
+			margin-bottom: 1.4rem;
 		}
 
-		.meditator-center {
-			width: 60%;
-			height: 60%;
+		.hero__subtitle {
+			font-size: 1.025rem;
 		}
+
+		.hero__description {
+			font-size: 0.9375rem;
+			line-height: 1.8;
+		}
+
+		.hero__actions {
+			gap: 0.65rem 1.5rem;
+			margin-top: 1.75rem;
+		}
+
+		.hero__actions button {
+			padding-inline: 1.5rem;
+		}
+
+		.hero__note {
+			font-size: 0.7rem;
+		}
+
+		.hero__image {
+			padding: 0.75rem;
+		}
+
+		.planet {
+			width: calc(var(--planet-size) * 0.8);
+			height: calc(var(--planet-size) * 0.8);
+		}
+
 		.planet-slider {
-			bottom: 10px;
-			right: 10px;
-			padding: 10px 12px;
-			min-width: 120px;
+			width: 125px;
+			margin-top: 1.25rem;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.orbit-ring {
+			animation: none;
 		}
 
-		.planet-slider label {
-			font-size: 0.8rem;
+		.hero__actions button {
+			transition: none;
 		}
 	}
 </style>
