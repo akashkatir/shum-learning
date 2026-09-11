@@ -59,7 +59,10 @@
 				<button class:is-complete={isFirstLessonCompleted} on:click={handleBegin}>
 					Start Lesson 1 <span aria-hidden="true">&rarr;</span>
 				</button>
-				<a href="#lesson-overview">Explore the primer <span aria-hidden="true">&rarr;</span></a>
+				<a href="#lesson-overview">
+					<span class="hero__link-label">Explore the primer</span>
+					<span aria-hidden="true">&rarr;</span>
+				</a>
 			</div>
 			<p class="hero__note">Begin with the essentials. Progress at your own pace.</p>
 		</div>
@@ -277,6 +280,11 @@
 		color: var(--hero-purple-hover);
 		font-size: 0.875rem;
 		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.hero__actions .hero__link-label {
+		text-decoration: underline;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 5px;
 	}
@@ -285,7 +293,7 @@
 		color: var(--hero-purple);
 	}
 
-	.hero__actions span {
+	.hero__actions span[aria-hidden='true'] {
 		font-size: 1.35rem;
 		line-height: 1;
 	}
